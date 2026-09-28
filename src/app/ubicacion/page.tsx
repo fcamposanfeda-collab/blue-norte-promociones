@@ -19,8 +19,8 @@ export default function LocationsPage() {
         eyebrow="Ubicación"
         title="Dónde vamos a construir"
         lead="Tres ciudades y ningún discurso repetido. Cada una pide una casa distinta, y la página de cada ciudad lo cuenta con su propio texto."
-        image="/images/cities/madrid.webp"
-        imageAlt="Ilustración de reserva para la página de ubicaciones de Blue Norte."
+        image="/images/cities/madrid.jpg"
+        imageAlt="La Gran Vía de Madrid, con el edificio Metrópolis en primer plano."
         crumbs={[
           { name: "Inicio", href: "/" },
           { name: "Ubicación" },

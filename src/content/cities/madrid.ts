@@ -11,8 +11,8 @@ export const madrid: CityPage = {
   seoDescription:
     "Blue Norte es promotora de obra nueva en Madrid. Vivienda en barrios consolidados, sin reventa, con ficha clara y visita a demanda.",
   lead: "En Madrid, la obra nueva dentro de la ciudad consolidada es un producto escaso y muy mirado: lo compran familias que no quieren irse a la periferia e inversores que comparan renta, gastos y calidad del edificio. Blue Norte trabaja ese mercado como promotora, no como intermediaria de segunda mano.",
-  image: "/images/cities/madrid.webp",
-  imageAlt: "Ilustración de reserva del perfil de Madrid, pendiente de fotografía real.",
+  image: "/images/cities/madrid.jpg",
+  imageAlt: "La Gran Vía de Madrid, con el edificio Metrópolis en primer plano.",
   lat: 40.4168,
   lng: -3.7038,
   sections: [

@@ -72,6 +72,36 @@ export const valuePoints = [
   },
 ];
 
+export const services = [
+  {
+    overlay: "Living",
+    title: "Living",
+    text: "¿Te gustaría disfrutar de tu casa desde el primer día? Living es el servicio de interiorismo y decoración de Blue Norte. Diseñamos la vivienda según cómo vas a vivirla, con un proyecto cercano y personalizado: asesoramiento, mobiliario y distribución de espacios para que la estrenes sin tener que organizarlo todo.",
+    cta: "Descubre lo que Living puede hacer por ti",
+    href: "/contacto",
+    image: "/images/services/living.jpg",
+    imageAlt: "Salón de una vivienda nueva con sofá, butacas y luz natural. Imagen de referencia.",
+  },
+  {
+    overlay: "Benefits",
+    title: "Benefits",
+    text: "Queremos que entrar en la casa nueva sea sencillo. Benefits pone en marcha lo que suele quedarse para el último momento: suministros, mudanza y los servicios que hacen falta para vivirla desde el primer día. Según la promoción, puedes contratar solo lo que necesites.",
+    cta: "Consulta los servicios de tu promoción",
+    href: "/contacto",
+    image: "/images/services/benefits.jpg",
+    imageAlt: "Salón abierto a la cocina de una vivienda nueva, con grandes ventanales. Imagen de referencia.",
+  },
+  {
+    overlay: "Select",
+    title: "Select",
+    text: "Select permite configurar la vivienda a tu manera. Según la fase de la obra puedes elegir distribución, acabados y equipamiento, y adaptar la casa a tus gustos. Las opciones de cada promoción se confirman en el punto de venta.",
+    cta: "Descubre tus opciones de personalización",
+    href: "/contacto",
+    image: "/images/services/select.jpg",
+    imageAlt: "Salón de una vivienda nueva con escalera de madera y sofás claros. Imagen de referencia.",
+  },
+];
+
 export const processSteps = [
   {
     title: "Planificamos",

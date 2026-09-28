@@ -11,8 +11,8 @@ export const malaga: CityPage = {
   seoDescription:
     "Vivienda de obra nueva en Málaga: cómo elegir zona, qué mirar en la memoria de calidades y cómo pedir una visita con Blue Norte.",
   lead: "Málaga concentra una de las demandas más claras de vivienda nueva del sur peninsular: quien vive aquí todo el año y quien busca segunda residencia en la costa. Blue Norte trabaja la ciudad con promociones de obra nueva, no con reventa.",
-  image: "/images/cities/malaga.webp",
-  imageAlt: "Ilustración de reserva del perfil urbano de Málaga, pendiente de fotografía real.",
+  image: "/images/cities/malaga.jpg",
+  imageAlt: "Vista de Málaga desde Gibralfaro: el puerto, el centro de la ciudad y las montañas.",
   lat: 36.7213,
   lng: -4.4214,
   sections: [

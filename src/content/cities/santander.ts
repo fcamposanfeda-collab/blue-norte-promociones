@@ -11,8 +11,8 @@ export const santander: CityPage = {
   seoDescription:
     "Viviendas de obra nueva en Santander: clima, barrios y qué exigir a una promoción antes de comprar sobre plano con Blue Norte.",
   lead: "Santander pide una vivienda distinta a la de la costa sur. La lluvia, el viento de la bahía y el deseo de vivir el año entero junto al mar cambian la envolvente, la carpintería y hasta el modo de usar una terraza. Blue Norte desarrolla aquí solo obra nueva.",
-  image: "/images/cities/santander.webp",
-  imageAlt: "Ilustración de reserva de la bahía de Santander, pendiente de fotografía real.",
+  image: "/images/cities/santander.jpg",
+  imageAlt: "La península de la Magdalena en Santander, con el palacio, la bahía y la playa del Sardinero.",
   lat: 43.4623,
   lng: -3.81,
   sections: [

@@ -4,7 +4,7 @@ import { ProjectCard } from "@/components/projects/ProjectCard";
 import { Container } from "@/components/ui/Container";
 import { MediaFrame } from "@/components/ui/MediaFrame";
 import { Reveal } from "@/components/ui/Reveal";
-import { processSteps, valuePoints } from "@/content/brand";
+import { processSteps, services, valuePoints } from "@/content/brand";
 import { cities } from "@/content/cities";
 import { dictionary } from "@/i18n/get-dictionary";
 import { typologyLabel } from "@/lib/labels";
@@ -29,14 +29,14 @@ export default function HomePage() {
       <section className="relative flex min-h-svh items-end bg-navy text-ivory">
         <div className="absolute inset-0">
           <MediaFrame
-            src="/images/hero.webp"
-            alt="Ilustración de reserva de una fachada residencial al amanecer. La fotografía real del proyecto está pendiente."
+            src="/images/hero-fachada.jpg"
+            alt="Fachada de una vivienda de obra nueva, con volúmenes blancos, grandes ventanales y piscina. Imagen de referencia."
             priority
             sizes="100vw"
             className="h-full"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-navy/25" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/55 to-transparent" />
         <Container className="relative z-10 pt-32 pb-28">
           <p className="text-xs tracking-[0.22em] text-sand uppercase">Blue Norte Promociones</p>
           <h1 className="mt-4 max-w-4xl text-5xl md:text-7xl">Vivienda nueva, con calma y con criterio.</h1>
@@ -144,6 +144,44 @@ export default function HomePage() {
         </Container>
       </section>
 
+      <section className="bg-ivory-deep py-16 md:py-20" aria-labelledby="servicios-heading">
+        <Container>
+          <h2 id="servicios-heading" className="font-sans text-2xl font-normal tracking-normal text-muted">
+            Nuestros servicios
+          </h2>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {services.map((service) => (
+              <article key={service.title} className="flex flex-col bg-white shadow-[0_10px_30px_rgba(12,28,46,0.06)]">
+                <div className="relative">
+                  <MediaFrame
+                    src={service.image}
+                    alt={service.imageAlt}
+                    className="aspect-[4/3]"
+                    sizes="(min-width: 768px) 30vw, 100vw"
+                  />
+                  <p
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-0 flex items-center justify-center bg-navy/25 px-4 text-center font-sans text-4xl font-medium tracking-wide text-white md:text-5xl"
+                  >
+                    {service.overlay}
+                  </p>
+                </div>
+                <div className="flex flex-1 flex-col px-6 py-6">
+                  <h3 className="font-sans text-xl font-medium tracking-normal">{service.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted">{service.text}</p>
+                  <Link
+                    href={service.href}
+                    className="mt-auto pt-4 text-sm font-medium text-navy underline decoration-navy/30 underline-offset-4 hover:decoration-navy"
+                  >
+                    {service.cta}
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </Container>
+      </section>
+
       <section className="bg-navy py-20 text-ivory">
         <Container>
           <h2 className="text-4xl md:text-5xl">Tres ciudades, un mismo oficio</h2>
@@ -155,6 +193,13 @@ export default function HomePage() {
                   alt={city.imageAlt}
                   className="aspect-[4/5]"
                   sizes="(min-width: 768px) 30vw, 100vw"
+                  imageClassName={
+                    city.slug === "malaga"
+                      ? "object-[32%_center]"
+                      : city.slug === "santander"
+                        ? "object-[62%_center]"
+                        : "object-[center_58%]"
+                  }
                 />
                 <h3 className="mt-4 text-4xl group-hover:underline">{city.name}</h3>
                 <p className="text-sm text-sand">{city.provinceName}</p>
