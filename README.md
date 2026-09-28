@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Blue Norte Promociones
 
-## Getting Started
+Web corporativa de Blue Norte, promotora de obra nueva en Málaga, Santander y Madrid. Next.js (App Router), TypeScript y Tailwind CSS.
 
-First, run the development server:
+Los textos comerciales que aún no existen están marcados como `[COMPLETAR: …]`. La lista viva está en [docs/PENDIENTES.md](docs/PENDIENTES.md).
+
+## Arranque
 
 ```bash
+npm install
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Otros comandos:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run lint
+npm run format
+```
 
-## Learn More
+## Contenido
 
-To learn more about Next.js, take a look at the following resources:
+Los proyectos, las ciudades y los artículos viven en `src/content`. Las páginas no leen esos archivos directamente: pasan por `src/lib`, para poder cambiar luego la fuente por un CMS sin rehacer las rutas.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+El idioma activo es el español de España. `src/i18n` deja el tipo de locale preparado para el inglés.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Formulario
 
-## Deploy on Vercel
+`POST /api/contacto` valida con Zod, ignora el campo señuelo `company_website` y exige la casilla de privacidad.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `EMAIL_PROVIDER=console` deja el mensaje en el log del servidor. Sirve en local.
+- `EMAIL_PROVIDER=resend` envía con la API de Resend. Hacen falta `RESEND_API_KEY`, `CONTACT_FROM_EMAIL` y `CONTACT_TO_EMAIL`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Analítica
+
+El aviso de cookies guarda la decisión en `localStorage` (`bn-consent`). Google Analytics 4 solo se inserta si la persona acepta y si `NEXT_PUBLIC_GA_ID` tiene forma `G-…`. Search Console se verifica con `NEXT_PUBLIC_GSC_VERIFICATION`.
+
+## Despliegue en Vercel
+
+1. Importa este repositorio en Vercel.
+2. Framework: Next.js. No hace falta comando de build distinto de `npm run build`.
+3. Copia las variables de `.env.example` al proyecto, con `NEXT_PUBLIC_SITE_URL` en la URL real (sin barra final).
+4. El `sitemap.xml` y el `robots.txt` salen de esa URL.
+
+## SEO
+
+Cada página tiene title, description, canonical, Open Graph y Twitter. Las combinaciones de filtros de `/proyectos` y las categorías o páginas de `/actualidad` apuntan con canonical a la URL base y van con `noindex`.
