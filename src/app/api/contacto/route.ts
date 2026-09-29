@@ -50,12 +50,13 @@ export async function POST(request: Request) {
     );
   }
 
-  const subject = `Solicitud de información${data.promotion ? ` — ${data.promotion}` : ""}`;
+  const subject = `Solicitud de información${data.city ? ` — ${data.city}` : ""}`;
   const text = [
     `Nombre: ${data.name}`,
     `Email: ${data.email}`,
     `Teléfono: ${data.phone}`,
-    `Promoción: ${data.promotion || "Sin promoción concreta"}`,
+    `Ciudad: ${data.city || "Sin ciudad concreta"}`,
+    ...(data.promotion ? [`Promoción: ${data.promotion}`] : []),
     "",
     data.message,
   ].join("\n");

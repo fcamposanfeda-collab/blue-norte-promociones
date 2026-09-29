@@ -9,6 +9,7 @@ export function PageHero({
   lead,
   image,
   imageAlt,
+  imageClassName = "",
   crumbs,
 }: {
   eyebrow?: string;
@@ -16,12 +17,20 @@ export function PageHero({
   lead?: string;
   image: string;
   imageAlt: string;
+  imageClassName?: string;
   crumbs?: Crumb[];
 }) {
   return (
     <section className="relative flex min-h-[68vh] items-end bg-navy text-ivory">
       <div className="absolute inset-0">
-        <MediaFrame src={image} alt={imageAlt} priority sizes="100vw" className="h-full" />
+        <MediaFrame
+          src={image}
+          alt={imageAlt}
+          priority
+          sizes="100vw"
+          className="h-full"
+          imageClassName={imageClassName}
+        />
       </div>
       <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/55 to-navy/20" />
       <Container className="relative z-10 pt-32 pb-14">

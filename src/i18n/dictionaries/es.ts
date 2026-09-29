@@ -7,8 +7,8 @@ export const dictionary = {
     news: "Actualidad",
     contact: "Contacto",
     request: "Solicita información",
-    menu: "Abrir menú",
-    close: "Cerrar menú",
+    menu: "MENÚ",
+    close: "CERRAR",
     skip: "Saltar al contenido",
   },
   search: {
@@ -27,7 +27,7 @@ export const dictionary = {
     email: "Email",
     phone: "Teléfono",
     message: "Mensaje",
-    promotion: "Promoción",
+    city: "Ciudad",
     consent: "He leído la política de privacidad y consiento el tratamiento de mis datos para atender esta solicitud.",
     submit: "Enviar solicitud",
     sending: "Enviando…",
@@ -65,7 +65,7 @@ export type Dictionary = {
     email: string;
     phone: string;
     message: string;
-    promotion: string;
+    city: string;
     consent: string;
     submit: string;
     sending: string;

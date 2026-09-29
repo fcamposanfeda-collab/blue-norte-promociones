@@ -13,8 +13,8 @@ export const sobrePlano: Post = {
   readingMinutes: 9,
   excerpt:
     "Comprar sobre plano es reservar una casa que todavía no existe. El orden de los papeles importa más que el render.",
-  image: "/images/blog/sobre-plano.webp",
-  imageAlt: "Ilustración de reserva para la guía de compra de vivienda sobre plano.",
+  image: "/images/blog/sobre-plano.jpg",
+  imageAlt: "Plano de una vivienda sobre la mesa, mientras se revisa el dibujo.",
   blocks: [
     {
       type: "p",

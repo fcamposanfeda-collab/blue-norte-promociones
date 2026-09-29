@@ -2,17 +2,15 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { cities } from "@/content/cities";
 import { dictionary } from "@/i18n/get-dictionary";
-import type { Project } from "@/types/content";
 
 type Status = "idle" | "loading" | "success" | "error";
 
 export function ContactForm({
-  projects,
   promotion,
   compact = false,
 }: {
-  projects?: Project[];
   promotion?: string;
   compact?: boolean;
 }) {
@@ -55,21 +53,18 @@ export function ContactForm({
       <Field label={copy.name} name="name" error={errors.name} autoComplete="name" />
       <Field label={copy.email} name="email" type="email" error={errors.email} autoComplete="email" />
       <Field label={copy.phone} name="phone" type="tel" error={errors.phone} autoComplete="tel" />
-      {projects ? (
-        <label className="grid gap-2 text-sm">
-          {copy.promotion}
-          <select name="promotion" defaultValue={promotion ?? ""} className="min-h-12 border border-line bg-white px-3">
-            <option value="">Sin promoción concreta</option>
-            {projects.map((project) => (
-              <option key={project.slug} value={project.name}>
-                {project.name}
-              </option>
-            ))}
-          </select>
-        </label>
-      ) : (
-        <input type="hidden" name="promotion" value={promotion ?? ""} />
-      )}
+      <label className="grid gap-2 text-sm">
+        {copy.city}
+        <select name="city" defaultValue="" className="min-h-12 border border-line bg-white px-3">
+          <option value="">Sin ciudad concreta</option>
+          {cities.map((city) => (
+            <option key={city.slug} value={city.name}>
+              {city.name}
+            </option>
+          ))}
+        </select>
+      </label>
+      {promotion ? <input type="hidden" name="promotion" value={promotion} /> : null}
       <label className="grid gap-2 text-sm">
         {copy.message}
         <textarea

@@ -3,7 +3,6 @@ import { PageHero } from "@/components/layout/PageHero";
 import { PendingText } from "@/components/ui/PendingText";
 import { Container } from "@/components/ui/Container";
 import { offices } from "@/content/brand";
-import { getAllProjects } from "@/lib/projects";
 import { buildMetadata } from "@/lib/site";
 
 export const metadata = buildMetadata({
@@ -20,8 +19,9 @@ export default function ContactPage() {
         eyebrow="Contacto"
         title="Solicita información"
         lead="Cuéntanos la ciudad, los dormitorios y si buscas vivienda para vivir o para invertir."
-        image="/images/contacto.webp"
-        imageAlt="Ilustración de reserva de la página de contacto."
+        image="/images/contacto.jpg"
+        imageAlt="Entrada de una vivienda de obra nueva, con la puerta abierta y la luz del interior."
+        imageClassName="object-[center_78%]"
         crumbs={[
           { name: "Inicio", href: "/" },
           { name: "Contacto" },
@@ -48,7 +48,7 @@ export default function ContactPage() {
               </article>
             ))}
           </div>
-          <ContactForm projects={getAllProjects()} />
+          <ContactForm />
         </Container>
       </section>
     </>

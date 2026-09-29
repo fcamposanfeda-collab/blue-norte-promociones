@@ -38,8 +38,8 @@ export default async function NewsPage({
         eyebrow="Actualidad"
         title="Ideas para comprar con calma"
         lead="Tres guías para empezar: por qué obra nueva, qué dice la letra energética y cómo se compra sobre plano."
-        image="/images/blog/obra-nueva.webp"
-        imageAlt="Ilustración de reserva de la sección de actualidad."
+        image="/images/blog/obra-nueva.jpg"
+        imageAlt="Vivienda contemporánea de obra nueva al anochecer, con el interior iluminado y jardín."
         crumbs={[
           { name: "Inicio", href: "/" },
           { name: "Actualidad" },

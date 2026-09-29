@@ -13,8 +13,8 @@ export const calificacionEnergetica: Post = {
   readingMinutes: 7,
   excerpt:
     "La A es la mejor letra del certificado energético español. Resume consumo y emisiones. No describe por sí sola cómo se vive la casa.",
-  image: "/images/blog/energia.webp",
-  imageAlt: "Ilustración de reserva para el artículo sobre la calificación energética A.",
+  image: "/images/blog/energia.jpg",
+  imageAlt: "Paneles solares bajo un cielo despejado.",
   blocks: [
     {
       type: "p",

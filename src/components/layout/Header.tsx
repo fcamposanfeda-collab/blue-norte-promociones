@@ -68,7 +68,7 @@ export function Header() {
         </nav>
         <button
           type="button"
-          className="inline-flex min-h-11 items-center px-3 text-sm lg:hidden"
+          className="inline-flex min-h-12 origin-center items-center border border-ivory px-5 text-sm transition duration-300 ease-out motion-safe:hover:scale-105 lg:hidden"
           aria-expanded={open}
           aria-controls="menu-movil"
           onClick={() => setOpenPath(open ? null : pathname)}

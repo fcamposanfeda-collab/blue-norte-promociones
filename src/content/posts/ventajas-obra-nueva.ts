@@ -13,8 +13,8 @@ export const ventajasObraNueva: Post = {
   readingMinutes: 8,
   excerpt:
     "La obra nueva no es mejor por ser nueva. Lo es cuando la distribución, la envolvente y la garantía responden a cómo vas a vivir la casa.",
-  image: "/images/blog/obra-nueva.webp",
-  imageAlt: "Ilustración de reserva para el artículo sobre ventajas de comprar obra nueva.",
+  image: "/images/blog/obra-nueva.jpg",
+  imageAlt: "Vivienda contemporánea de obra nueva al anochecer, con el interior iluminado y jardín.",
   blocks: [
     {
       type: "p",

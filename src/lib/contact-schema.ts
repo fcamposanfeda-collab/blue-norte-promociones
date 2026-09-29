@@ -14,6 +14,7 @@ export const contactSchema = z.object({
     .trim()
     .min(10, "Cuéntanos un poco más, al menos una frase.")
     .max(2000, "El mensaje es demasiado largo."),
+  city: z.string().trim().max(80).optional(),
   promotion: z.string().trim().max(140).optional(),
   consent: z.literal("yes", "Es necesario aceptar la política de privacidad."),
   company_website: z.string().optional(),
