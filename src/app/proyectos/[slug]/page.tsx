@@ -66,18 +66,28 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       />
       <section className="relative flex min-h-[78vh] items-end bg-navy text-ivory">
         <div className="absolute inset-0">
-          <MediaFrame src={project.image} alt={project.imageAlt} priority sizes="100vw" className="h-full" />
+          {project.photoPending ? (
+            <div className="h-full bg-sand" />
+          ) : (
+            <MediaFrame src={project.image} alt={project.imageAlt} priority sizes="100vw" className="h-full" />
+          )}
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-navy/20" />
         <Container className="relative z-10 pt-32 pb-12">
           <Breadcrumbs items={crumbs} />
           <p className="mt-4 text-xs tracking-[0.2em] text-sand uppercase">
-            {statusLabel[project.status]} · Ejemplo editorial
+            {project.status ? (
+              statusLabel[project.status]
+            ) : (
+              <PendingText text="[COMPLETAR: estado de la promoción]" />
+            )}
+            {project.isExample ? " · Ejemplo editorial" : null}
           </p>
           <h1 className="mt-3 text-5xl md:text-7xl">{project.name}</h1>
           <p className="mt-3 text-lg">
             {project.cityName}, {project.zone}
           </p>
+          {project.photoPending ? <p className="mt-3 text-sm text-sand">Fotografía del edificio pendiente.</p> : null}
         </Container>
       </section>
 
@@ -90,11 +100,16 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           </div>
           <dl className="grid gap-4 border border-line bg-white p-6 text-sm">
             <Fact term="Ciudad" value={project.cityName} />
+            {project.address ? <Fact term="Dirección" value={project.address} /> : null}
             <Fact term="Zona" value={project.zone} />
             <Fact term="Tipologías" value={formatTypologies(project.typologies)} />
             <Fact term="Dormitorios" value={formatBedrooms(project.bedrooms)} />
             <Fact term="Superficie" value={project.surfaceLabel} pending />
-            <Fact term="Estado" value={statusLabel[project.status]} />
+            <Fact
+              term="Estado"
+              value={project.status ? statusLabel[project.status] : "[COMPLETAR: estado de la promoción]"}
+              pending={!project.status}
+            />
             <Fact term="Entrega estimada" value={project.deliveryLabel} pending />
             <Fact term="Precio" value={`Desde ${project.priceFromLabel}`} pending />
             <div>
@@ -106,6 +121,80 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </Container>
       </section>
 
+      {project.gallery?.length ? (
+        <Section title="Imágenes">
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
+            {project.gallery.map((item) => (
+              <MediaFrame
+                key={item.src}
+                src={item.src}
+                alt={item.alt}
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="aspect-[4/3]"
+                fit="contain"
+              />
+            ))}
+          </div>
+          <p className="mt-4 max-w-3xl text-sm text-muted">
+            Infografías y plano de la comercialización. Son orientativos y no tienen carácter contractual.
+          </p>
+        </Section>
+      ) : null}
+
+      {project.units ? (
+        <Section title="Programa de viviendas">
+          {project.unitsNote ? <p className="mt-4 max-w-3xl text-muted">{project.unitsNote}</p> : null}
+          <div className="mt-6 overflow-x-auto border border-line">
+            <table className="w-full min-w-[72rem] border-collapse text-left text-sm">
+              <caption className="sr-only">
+                Superficies y precios por vivienda de {project.name}. Medidas en metros cuadrados.
+              </caption>
+              <thead className="bg-ivory text-xs tracking-wide uppercase">
+                <tr>
+                  {[
+                    "Planta",
+                    "Puerta",
+                    "Situación",
+                    "Tipo",
+                    "Dormitorios",
+                    "Baños",
+                    "Útil (m²)",
+                    "Construida privativa (m²)",
+                    "Construida con zonas comunes (m²)",
+                    "Terraza o patio (m²)",
+                    ...(project.units.some((unit) => unit.price) ? ["Precio"] : []),
+                  ].map((heading) => (
+                    <th key={heading} scope="col" className="px-3 py-3 font-medium">
+                      {heading}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {project.units.map((unit) => (
+                  <tr key={`${unit.floor}-${unit.door}`} className="border-t border-line">
+                    <th scope="row" className="px-3 py-3 font-medium">
+                      {unit.floor}
+                    </th>
+                    <td className="px-3 py-3">{unit.door}</td>
+                    <td className="px-3 py-3">{unit.situation}</td>
+                    <td className="px-3 py-3">{unit.type}</td>
+                    <td className="px-3 py-3 tabular-nums">{unit.bedrooms}</td>
+                    <td className="px-3 py-3 tabular-nums">{unit.bathrooms}</td>
+                    <td className="px-3 py-3 tabular-nums">{unit.usefulM2}</td>
+                    <td className="px-3 py-3 tabular-nums">{unit.privateBuiltM2}</td>
+                    <td className="px-3 py-3 tabular-nums">{unit.builtWithCommonM2}</td>
+                    <td className="px-3 py-3 tabular-nums">{unit.outdoor}</td>
+                    {project.units?.some((item) => item.price) ? (
+                      <td className="px-3 py-3 tabular-nums">{unit.price ?? "—"}</td>
+                    ) : null}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Section>
+      ) : null}
       <Section title="Memoria de calidades">
         <SpecList items={project.qualities} />
       </Section>
@@ -147,8 +236,14 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           />
           <div className="space-y-4 text-sm">
             <p className="text-muted">
-              El marcador sitúa la zona, no una parcela. Dirección exacta:{" "}
-              <PendingText text="[COMPLETAR: coordenadas de la promoción]." />
+              {project.address ? (
+                <>El marcador corresponde a {project.address}.</>
+              ) : (
+                <>
+                  El marcador sitúa la zona, no una parcela. Dirección exacta:{" "}
+                  <PendingText text="[COMPLETAR: coordenadas de la promoción]." />
+                </>
+              )}
             </p>
             <List title="Servicios" items={project.surroundings.services} />
             <List title="Transporte" items={project.surroundings.transport} />
@@ -162,8 +257,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           <div>
             <h2 className="text-4xl">Información de {project.name}</h2>
             <p className="mt-4 text-muted">
-              Deja tus datos si quieres el dossier, una visita o aviso cuando esta ficha deje de ser
-              un ejemplo.
+              {project.isExample
+                ? "Deja tus datos si quieres el dossier, una visita o aviso cuando esta ficha deje de ser un ejemplo."
+                : "Deja tus datos si quieres el cuadro de superficies, una visita o más información de esta promoción."}
             </p>
           </div>
           <ContactForm promotion={project.name} />

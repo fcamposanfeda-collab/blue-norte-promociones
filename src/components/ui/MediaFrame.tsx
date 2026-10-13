@@ -7,6 +7,7 @@ export function MediaFrame({
   sizes = "(min-width: 1024px) 60vw, 100vw",
   className = "aspect-[16/10]",
   imageClassName = "",
+  fit = "cover",
 }: {
   src: string;
   alt: string;
@@ -14,6 +15,7 @@ export function MediaFrame({
   sizes?: string;
   className?: string;
   imageClassName?: string;
+  fit?: "cover" | "contain";
 }) {
   return (
     <div className={`relative overflow-hidden bg-sand ${className}`}>
@@ -23,7 +25,7 @@ export function MediaFrame({
         fill
         priority={priority}
         sizes={sizes}
-        className={`object-cover ${imageClassName}`}
+        className={`${fit === "contain" ? "object-contain" : "object-cover"} ${imageClassName}`}
       />
     </div>
   );

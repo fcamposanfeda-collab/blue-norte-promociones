@@ -63,7 +63,7 @@ export const malaga: CityPage = {
       heading: "Cómo acompaña Blue Norte en Málaga",
       paragraphs: [
         "La oficina de Málaga está pendiente de dirección, teléfono y horario publicados. Mientras tanto, la vía de contacto es el formulario de esta web. Quien escribe indica si busca primera vivienda, segunda residencia o inversión, y en qué zona. Respondemos con las promociones que encajen o, si aún no hay ninguna a la venta, con la noticia de cuándo la habrá.",
-        "Puedes ver el conjunto de la ciudad en el [listado de proyectos](/proyectos?ciudad=malaga), comparar con [Santander](/ubicacion/santander) y [Madrid](/ubicacion/madrid), o leer la [guía para comprar sobre plano](/actualidad/guia-comprar-sobre-plano) antes de la primera visita. Si lo que te interesa es el comportamiento del edificio, la nota sobre la [calificación energética A](/actualidad/calificacion-energetica-a) explica qué significa la letra y qué no promete.",
+        "Puedes ver el conjunto de la ciudad en el [listado de proyectos](/proyectos?ciudad=malaga), comparar con [Santander](/ubicacion/santander), [Madrid](/ubicacion/madrid) y [Ciudad Real](/ubicacion/ciudad-real), o leer la [guía para comprar sobre plano](/actualidad/guia-comprar-sobre-plano) antes de la primera visita. Si lo que te interesa es el comportamiento del edificio, la nota sobre la [calificación energética A](/actualidad/calificacion-energetica-a) explica qué significa la letra y qué no promete.",
       ],
     },
   ],

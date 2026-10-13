@@ -89,7 +89,7 @@ export const ventajasObraNueva: Post = {
     },
     {
       type: "p",
-      text: "Blue Norte vende solo vivienda nueva en [Málaga](/ubicacion/malaga), [Santander](/ubicacion/santander) y [Madrid](/ubicacion/madrid). Puedes revisar las [promociones](/proyectos) —hoy, fichas de ejemplo— o [pedir información](/contacto) con la ciudad y los dormitorios que buscas.",
+      text: "Blue Norte vende solo vivienda nueva en [Málaga](/ubicacion/malaga), [Santander](/ubicacion/santander), [Madrid](/ubicacion/madrid) y [Ciudad Real](/ubicacion/ciudad-real). Puedes revisar las [promociones](/proyectos) —hoy, fichas de ejemplo salvo Calle Sevilla 21— o [pedir información](/contacto) con la ciudad y los dormitorios que buscas.",
     },
   ],
   faq: [

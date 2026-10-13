@@ -5,6 +5,7 @@ import { ProjectCard } from "@/components/projects/ProjectCard";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { RichParagraph } from "@/components/content/RichText";
 import { Container } from "@/components/ui/Container";
+import { ImageCredit } from "@/components/ui/ImageCredit";
 import { cities, getCity } from "@/content/cities";
 import { breadcrumbSchema, faqSchema, graphSchema } from "@/lib/schema";
 import { filterProjects } from "@/lib/projects";
@@ -44,12 +45,16 @@ export default async function CityPage({ params }: { params: Promise<{ ciudad: s
         eyebrow={city.region}
         title={city.h1}
         lead={city.lead}
-        image={city.image}
+        image={city.photoPending ? undefined : city.image}
         imageAlt={city.imageAlt}
+        imageClassName={city.slug === "ciudad-real" ? "object-[58%_42%]" : undefined}
         crumbs={crumbs}
       />
       <article className="py-16">
         <Container className="max-w-3xl">
+          {city.imageCredit ? (
+            <ImageCredit credit={city.imageCredit} className="text-xs leading-relaxed text-muted" />
+          ) : null}
           {city.sections.map((section) => (
             <section key={section.id} id={section.id} className="mt-10">
               {section.level === "h3" ? (
@@ -66,12 +71,20 @@ export default async function CityPage({ params }: { params: Promise<{ ciudad: s
       </article>
       <section className="bg-white py-16">
         <Container>
-          <h2 className="text-4xl">Promociones de ejemplo en {city.name}</h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            {related.map((project) => (
-              <ProjectCard key={project.slug} project={project} />
-            ))}
-          </div>
+          <h2 className="text-4xl">
+            {related.length > 0 ? `Promociones de ejemplo en ${city.name}` : `Promociones en ${city.name}`}
+          </h2>
+          {related.length > 0 ? (
+            <div className="mt-8 grid gap-6 md:grid-cols-2">
+              {related.map((project) => (
+                <ProjectCard key={project.slug} project={project} />
+              ))}
+            </div>
+          ) : (
+            <p className="mt-4 max-w-3xl text-muted">
+              Todavía no hay una promoción publicada en {city.name}.
+            </p>
+          )}
           <h2 className="mt-14 text-3xl">Otras ciudades</h2>
           <ul className="mt-4 flex flex-wrap gap-4">
             {others.map((item) => (

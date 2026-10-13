@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     template: "%s | Blue Norte",
   },
   description:
-    "Promotora de obra nueva en Málaga, Santander y Madrid. Consulta promociones y solicita información o una visita.",
+    "Promotora de obra nueva en Málaga, Santander, Madrid y Ciudad Real. Consulta promociones y solicita información o una visita.",
   applicationName: "Blue Norte Promociones",
   verification: process.env.NEXT_PUBLIC_GSC_VERIFICATION
     ? { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION }

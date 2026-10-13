@@ -1,5 +1,5 @@
-export type CitySlug = "malaga" | "santander" | "madrid";
-export type ProvinceSlug = "malaga" | "cantabria" | "madrid";
+export type CitySlug = "malaga" | "santander" | "madrid" | "ciudad-real";
+export type ProvinceSlug = "malaga" | "cantabria" | "madrid" | "ciudad-real";
 export type Typology = "piso" | "atico" | "adosado" | "unifamiliar";
 export type ProjectStatus =
   | "en-comercializacion"
@@ -12,10 +12,27 @@ export type SpecItem = {
   detail: string;
 };
 
+export type DwellingUnit = {
+  floor: string;
+  door: string;
+  situation: string;
+  type: string;
+  bedrooms: string;
+  bathrooms: string;
+  usefulM2: string;
+  privateBuiltM2: string;
+  builtWithCommonM2: string;
+  outdoor: string;
+  price?: string;
+};
+
 export type Project = {
   slug: string;
   name: string;
-  isExample: true;
+  isExample: boolean;
+  address?: string;
+  units?: DwellingUnit[];
+  unitsNote?: string;
   citySlug: CitySlug;
   cityName: string;
   provinceSlug: ProvinceSlug;
@@ -25,7 +42,7 @@ export type Project = {
   bedrooms: number[];
   surfaceLabel: string;
   priceFromLabel: string;
-  status: ProjectStatus;
+  status?: ProjectStatus;
   deliveryLabel: string;
   featured: boolean;
   excerpt: string;
@@ -42,6 +59,8 @@ export type Project = {
   };
   image: string;
   imageAlt: string;
+  gallery?: { src: string; alt: string }[];
+  photoPending?: boolean;
   lat: number;
   lng: number;
   seoTitle: string;
@@ -60,6 +79,14 @@ export type FaqItem = {
   answer: string;
 };
 
+export type ImageCredit = {
+  author: string;
+  authorUrl: string;
+  license: string;
+  licenseUrl: string;
+  sourceUrl: string;
+};
+
 export type CityPage = {
   slug: CitySlug;
   name: string;
@@ -72,6 +99,8 @@ export type CityPage = {
   lead: string;
   image: string;
   imageAlt: string;
+  imageCredit?: ImageCredit;
+  photoPending?: boolean;
   lat: number;
   lng: number;
   sections: CitySection[];

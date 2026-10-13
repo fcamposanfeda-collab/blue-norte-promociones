@@ -8,7 +8,7 @@ import { buildMetadata } from "@/lib/site";
 export const metadata = buildMetadata({
   title: "Solicita información | Blue Norte",
   description:
-    "Pide información o una visita sobre obra nueva en Málaga, Santander y Madrid. Oficinas pendientes de publicar.",
+    "Pide información o una visita sobre obra nueva en Málaga, Santander, Madrid y Ciudad Real. Oficinas pendientes de publicar.",
   path: "/contacto",
 });
 

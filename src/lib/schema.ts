@@ -9,7 +9,7 @@ export function organizationSchema() {
     name: siteName,
     url: siteUrl,
     description: brand.summary,
-    areaServed: ["Málaga", "Santander", "Madrid"],
+    areaServed: ["Málaga", "Santander", "Madrid", "Ciudad Real"],
     email: legalEntity.email.startsWith("[COMPLETAR") ? undefined : legalEntity.email,
   };
 }
@@ -46,9 +46,10 @@ export function projectSchema(project: Project) {
     name: project.name,
     description: project.excerpt,
     url: absoluteUrl(`/proyectos/${project.slug}`),
-    image: absoluteUrl(project.image),
+    ...(project.photoPending ? {} : { image: absoluteUrl(project.image) }),
     address: {
       "@type": "PostalAddress",
+      ...(project.address ? { streetAddress: project.address } : {}),
       addressLocality: project.cityName,
       addressRegion: project.provinceName,
       addressCountry: "ES",

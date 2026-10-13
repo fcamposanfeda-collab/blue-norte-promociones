@@ -10,7 +10,7 @@ export function Footer() {
         <div>
           <p className="font-serif text-3xl">Blue Norte</p>
           <p className="mt-3 text-sm text-sand">
-            Promotora de vivienda de obra nueva en Málaga, Santander y Madrid.
+            Promotora de vivienda de obra nueva en Málaga, Santander, Madrid y Ciudad Real.
           </p>
         </div>
         <div>

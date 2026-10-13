@@ -24,7 +24,7 @@ export async function generateMetadata({
   return buildMetadata({
     title: "Promociones de vivienda nueva | Blue Norte",
     description:
-      "Listado de promociones de obra nueva en Málaga, Santander y Madrid. Filtra por ciudad, tipología, dormitorios y estado.",
+      "Listado de promociones de obra nueva en Málaga, Santander, Madrid y Ciudad Real. Filtra por ciudad y dormitorios.",
     path: "/proyectos",
     index: !hasProjectFilters(query),
   });

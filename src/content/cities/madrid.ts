@@ -20,7 +20,7 @@ export const madrid: CityPage = {
       id: "promotora",
       heading: "Qué hace una promotora y qué no hacemos",
       paragraphs: [
-        "Una promotora de obra nueva en Madrid adquiere o concerta el suelo, encarga el proyecto, construye y vende las viviendas. No es lo mismo que una agencia que intermedia pisos usados, ni que un portal donde conviven alquiler y venta. Blue Norte se queda en el primer oficio y en tres ciudades: Madrid, Málaga y Santander.",
+        "Una promotora de obra nueva en Madrid adquiere o concerta el suelo, encarga el proyecto, construye y vende las viviendas. No es lo mismo que una agencia que intermedia pisos usados, ni que un portal donde conviven alquiler y venta. Blue Norte se queda en el primer oficio y en cuatro ciudades: Madrid, Málaga, Santander y Ciudad Real.",
         "Esa limitación es deliberada. El comprador de un piso nuevo en Chamberí o en Retiro necesita saber quién responde de la memoria de calidades y de la entrega, no una ficha repleta de anuncios de particulares. Por eso cada promoción tendrá una sola página, con estado, tipología, planos y un formulario que llega al equipo de esa obra.",
         "Somos una marca nueva. No atribuimos décadas de actividad en la capital ni un número de viviendas entregadas. Cuando haya una primera promoción real, se contará con su licencia, su calendario y su precio, no con un relato de trayectoria prestada.",
       ],

@@ -17,7 +17,7 @@ export default function HistoryPage() {
       <PageHero
         eyebrow="Historia"
         title="Una promotora que empieza"
-        lead="No venimos a recitar décadas que no hemos vivido. Blue Norte nace para hacer vivienda nueva en Málaga, Santander y Madrid, y para explicarla con la misma claridad con la que se construye."
+        lead="No venimos a recitar décadas que no hemos vivido. Blue Norte nace para hacer vivienda nueva en Málaga, Santander, Madrid y Ciudad Real, y para explicarla con la misma claridad con la que se construye."
         image="/images/historia.webp"
         imageAlt="Ilustración de reserva para la página de historia de Blue Norte."
         crumbs={[
@@ -46,7 +46,7 @@ export default function HistoryPage() {
             <div className="mt-8 grid gap-6 md:grid-cols-3">
               {[
                 ["Claridad", "Si un dato no está cerrado, se marca como pendiente. No se rellena con una cifra amable."],
-                ["Lugar", "Málaga, Santander y Madrid no comparten el mismo clima ni el mismo comprador. El proyecto tiene que notarlo."],
+                ["Lugar", "Málaga, Santander, Madrid y Ciudad Real no comparten el mismo clima ni el mismo comprador. El proyecto tiene que notarlo."],
                 ["Acompañamiento", "De la primera pregunta a la entrega, el comprador sabe a quién escribir y en qué fase está la casa."],
               ].map(([title, text]) => (
                 <div key={title} className="border border-line bg-white p-6">

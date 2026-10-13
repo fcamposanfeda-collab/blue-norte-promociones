@@ -22,8 +22,16 @@ export const statusOrder: ProjectStatus[] = [
 ];
 
 export function formatBedrooms(bedrooms: number[]) {
-  const sorted = [...bedrooms].sort((a, b) => a - b);
+  const sorted = [...new Set(bedrooms)].sort((a, b) => a - b);
   if (sorted.length === 0) return "[COMPLETAR: dormitorios]";
+  if (sorted[0] === 0) {
+    const rest = sorted.slice(1);
+    return rest.length === 0 ? "Estudios" : `Estudios y ${bedroomRange(rest)}`;
+  }
+  return bedroomRange(sorted);
+}
+
+function bedroomRange(sorted: number[]) {
   if (sorted.length === 1) {
     return sorted[0] === 1 ? "1 dormitorio" : `${sorted[0]} dormitorios`;
   }

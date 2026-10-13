@@ -1,9 +1,9 @@
 export const brand = {
   name: "Blue Norte Promociones",
   shortName: "Blue Norte",
-  claim: "Obra nueva en Málaga, Santander y Madrid.",
+  claim: "Obra nueva en Málaga, Santander, Madrid y Ciudad Real.",
   summary:
-    "Blue Norte Promociones es una promotora de vivienda nueva. Desarrolla promociones en Málaga, Santander y Madrid para quien busca primera residencia, segunda residencia o una inversión en obra nueva.",
+    "Blue Norte Promociones es una promotora de vivienda nueva. Desarrolla promociones en Málaga, Santander, Madrid y Ciudad Real para quien busca primera residencia, segunda residencia o una inversión en obra nueva.",
   disclaimer:
     "Las imágenes, infografías y planos son orientativos y no tienen carácter contractual. Las superficies, precios y fechas se publicarán cuando estén confirmados.",
 };
@@ -32,6 +32,14 @@ export const offices = [
     phone: "[COMPLETAR: teléfono Madrid]",
     email: "[COMPLETAR: email Madrid]",
     hours: "[COMPLETAR: horario Madrid]",
+  },
+  {
+    city: "Ciudad Real",
+    slug: "ciudad-real" as const,
+    address: "[COMPLETAR: dirección de la oficina de Ciudad Real]",
+    phone: "[COMPLETAR: teléfono Ciudad Real]",
+    email: "[COMPLETAR: email Ciudad Real]",
+    hours: "[COMPLETAR: horario Ciudad Real]",
   },
 ];
 
@@ -64,7 +72,7 @@ export const valuePoints = [
   },
   {
     title: "Entornos elegidos",
-    text: "No buscamos solar por solar. Elegimos ubicaciones en Málaga, Santander y Madrid por su vida de barrio, la luz y la relación con la ciudad.",
+    text: "No buscamos solar por solar. Elegimos ubicaciones en Málaga, Santander, Madrid y Ciudad Real por su vida de barrio, la luz y la relación con la ciudad.",
   },
   {
     title: "Acompañamiento",

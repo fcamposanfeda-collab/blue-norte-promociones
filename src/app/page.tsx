@@ -2,20 +2,20 @@ import Link from "next/link";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { ProjectCard } from "@/components/projects/ProjectCard";
 import { Container } from "@/components/ui/Container";
+import { ImageCredit } from "@/components/ui/ImageCredit";
 import { MediaFrame } from "@/components/ui/MediaFrame";
 import { Reveal } from "@/components/ui/Reveal";
 import { processSteps, services, valuePoints } from "@/content/brand";
 import { cities } from "@/content/cities";
 import { dictionary } from "@/i18n/get-dictionary";
-import { typologyLabel } from "@/lib/labels";
 import { getAllPosts } from "@/lib/posts";
 import { getFeaturedProjects } from "@/lib/projects";
 import { buildMetadata } from "@/lib/site";
 
 export const metadata = buildMetadata({
-  title: "Obra nueva en Málaga, Santander y Madrid",
+  title: "Obra nueva en Málaga, Santander, Madrid y Ciudad Real",
   description:
-    "Promotora de obra nueva en Málaga, Santander y Madrid. Consulta promociones y solicita información o una visita.",
+    "Promotora de obra nueva en Málaga, Santander, Madrid y Ciudad Real. Consulta promociones y solicita información o una visita.",
   path: "/",
 });
 
@@ -41,7 +41,7 @@ export default function HomePage() {
           <p className="text-xs tracking-[0.22em] text-sand uppercase">Blue Norte Promociones</p>
           <h1 className="mt-4 max-w-4xl text-5xl md:text-7xl">Vivienda nueva, con calma y con criterio.</h1>
           <p className="mt-6 max-w-xl text-lg text-ivory/90">
-            Promociones de obra nueva en Málaga, Santander y Madrid. Para quien busca casa y para
+            Promociones de obra nueva en Málaga, Santander, Madrid y Ciudad Real. Para quien busca casa y para
             quien mira una inversión, con la información por delante del folleto.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -57,7 +57,7 @@ export default function HomePage() {
 
       <section className="relative z-20 -mt-12 pb-8" aria-label="Buscador de promociones">
         <Container>
-          <form action="/proyectos" method="get" className="grid gap-4 border border-line bg-ivory p-5 shadow-lg md:grid-cols-4">
+          <form action="/proyectos" method="get" className="grid gap-4 border border-line bg-ivory p-5 shadow-lg md:grid-cols-3">
             <label className="grid gap-2 text-sm">
               {copy.city}
               <select name="ciudad" className="min-h-12 border border-line bg-white px-3" defaultValue="">
@@ -65,17 +65,7 @@ export default function HomePage() {
                 <option value="malaga">Málaga</option>
                 <option value="santander">Santander</option>
                 <option value="madrid">Madrid</option>
-              </select>
-            </label>
-            <label className="grid gap-2 text-sm">
-              {copy.typology}
-              <select name="tipologia" className="min-h-12 border border-line bg-white px-3" defaultValue="">
-                <option value="">{copy.all}</option>
-                {Object.entries(typologyLabel).map(([value, label]) => (
-                  <option key={value} value={value}>
-                    {label}
-                  </option>
-                ))}
+                <option value="ciudad-real">Ciudad Real</option>
               </select>
             </label>
             <label className="grid gap-2 text-sm">
@@ -103,8 +93,8 @@ export default function HomePage() {
             <p className="text-xs tracking-[0.2em] text-accent-ink uppercase">Promociones</p>
             <h2 className="mt-3 max-w-xl text-4xl md:text-5xl">Una selección para empezar a mirar</h2>
             <p className="mt-4 max-w-2xl text-muted">
-              Las fichas de abajo son ejemplos editoriales. El precio, la superficie y la fecha de
-              entrega se publicarán cuando sean reales.
+              Calle Sevilla 21, en Málaga, ya está en comercialización. El resto de fichas son
+              ejemplos editoriales. El precio y la fecha de entrega se publican cuando son reales.
             </p>
           </Reveal>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -184,26 +174,39 @@ export default function HomePage() {
 
       <section className="bg-navy py-20 text-ivory">
         <Container>
-          <h2 className="text-4xl md:text-5xl">Tres ciudades, un mismo oficio</h2>
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
+          <h2 className="text-4xl md:text-5xl">Cuatro ciudades, un mismo oficio</h2>
+          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {cities.map((city) => (
-              <Link key={city.slug} href={`/ubicacion/${city.slug}`} className="group block">
-                <MediaFrame
-                  src={city.image}
-                  alt={city.imageAlt}
-                  className="aspect-[4/5]"
-                  sizes="(min-width: 768px) 30vw, 100vw"
-                  imageClassName={
-                    city.slug === "malaga"
-                      ? "object-[32%_center]"
-                      : city.slug === "santander"
-                        ? "object-[62%_center]"
-                        : "object-[center_58%]"
-                  }
-                />
-                <h3 className="mt-4 text-4xl group-hover:underline">{city.name}</h3>
-                <p className="text-sm text-sand">{city.provinceName}</p>
-              </Link>
+              <div key={city.slug}>
+                <Link href={`/ubicacion/${city.slug}`} className="group block">
+                  {city.photoPending ? (
+                    <div className="flex aspect-[4/5] items-end bg-sand p-5 text-sm text-navy">
+                      Fotografía pendiente
+                    </div>
+                  ) : (
+                    <MediaFrame
+                      src={city.image}
+                      alt={city.imageAlt}
+                      className="aspect-[4/5]"
+                      sizes="(min-width: 1024px) 25vw, 50vw"
+                      imageClassName={
+                        city.slug === "malaga"
+                          ? "object-[32%_center]"
+                          : city.slug === "santander"
+                            ? "object-[62%_center]"
+                            : city.slug === "madrid"
+                              ? "object-[center_58%]"
+                              : "object-[64%_center]"
+                      }
+                    />
+                  )}
+                  <h3 className="mt-4 text-4xl group-hover:underline">{city.name}</h3>
+                  <p className="text-sm text-sand">{city.provinceName}</p>
+                </Link>
+                {city.imageCredit ? (
+                  <ImageCredit credit={city.imageCredit} className="mt-2 text-xs leading-relaxed text-sand/80" />
+                ) : null}
+              </div>
             ))}
           </div>
         </Container>

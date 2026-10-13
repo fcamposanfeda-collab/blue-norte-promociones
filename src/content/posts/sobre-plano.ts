@@ -99,7 +99,7 @@ export const sobrePlano: Post = {
     },
     {
       type: "p",
-      text: "El recorrido es el mismo en las tres ciudades de Blue Norte, con matices de producto: [obra nueva en Málaga](/ubicacion/malaga), [viviendas en Santander](/ubicacion/santander) y [promoción en Madrid](/ubicacion/madrid). Si quieres el contexto de por qué comprar nuevo, lee las [ventajas de la obra nueva](/actualidad/ventajas-comprar-obra-nueva). Para la letra del certificado, [la calificación A](/actualidad/calificacion-energetica-a).",
+      text: "El recorrido es el mismo en las ciudades de Blue Norte, con matices de producto: [obra nueva en Málaga](/ubicacion/malaga), [viviendas en Santander](/ubicacion/santander), [promoción en Madrid](/ubicacion/madrid) y [obra nueva en Ciudad Real](/ubicacion/ciudad-real). Si quieres el contexto de por qué comprar nuevo, lee las [ventajas de la obra nueva](/actualidad/ventajas-comprar-obra-nueva). Para la letra del certificado, [la calificación A](/actualidad/calificacion-energetica-a).",
     },
     {
       type: "p",

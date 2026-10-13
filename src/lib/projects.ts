@@ -3,8 +3,8 @@ import { statusOrder } from "@/lib/labels";
 import type { Project, ProjectStatus, ProvinceSlug, Typology } from "@/types/content";
 
 const typologies: Typology[] = ["piso", "atico", "adosado", "unifamiliar"];
-const provinces: ProvinceSlug[] = ["malaga", "cantabria", "madrid"];
-const cities = ["malaga", "santander", "madrid"] as const;
+const provinces: ProvinceSlug[] = ["malaga", "cantabria", "madrid", "ciudad-real"];
+const cities = ["malaga", "santander", "madrid", "ciudad-real"] as const;
 const statuses: ProjectStatus[] = [
   "en-comercializacion",
   "en-construccion",
@@ -69,9 +69,14 @@ export function filterProjects(query: ProjectQuery) {
 
 function compareProjects(a: Project, b: Project, orden: NonNullable<ProjectQuery["orden"]>) {
   if (orden === "nombre") return a.name.localeCompare(b.name, "es");
-  if (orden === "estado") return statusOrder.indexOf(a.status) - statusOrder.indexOf(b.status);
+  if (orden === "estado") return statusRank(a) - statusRank(b);
+  if (a.isExample !== b.isExample) return a.isExample ? 1 : -1;
   if (a.featured !== b.featured) return a.featured ? -1 : 1;
   return a.name.localeCompare(b.name, "es");
+}
+
+function statusRank(project: Project) {
+  return project.status ? statusOrder.indexOf(project.status) : statusOrder.length;
 }
 
 export function getProject(slug: string) {
