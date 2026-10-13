@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { legalEntity, nav, offices } from "@/content/brand";
+import { legalEntity, nav } from "@/content/brand";
 import { cities } from "@/content/cities";
-import { PendingText } from "@/components/ui/PendingText";
 
 export function Footer() {
   return (
@@ -40,16 +39,15 @@ export function Footer() {
         <div>
           <p className="text-xs tracking-[0.18em] text-stone uppercase">Contacto</p>
           <ul className="mt-4 space-y-3 text-sm">
-            {offices.map((office) => (
-              <li key={office.slug}>
-                <p className="font-medium">{office.city}</p>
-                <p>
-                  <PendingText text={office.phone} />
-                </p>
-              </li>
-            ))}
             <li>
-              <PendingText text={legalEntity.email} />
+              <a href={`tel:${legalEntity.phone.replaceAll(" ", "")}`} className="hover:underline">
+                {legalEntity.phone}
+              </a>
+            </li>
+            <li>
+              <a href={`mailto:${legalEntity.email}`} className="hover:underline">
+                {legalEntity.email}
+              </a>
             </li>
           </ul>
         </div>

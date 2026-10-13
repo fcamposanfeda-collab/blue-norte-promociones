@@ -11,6 +11,7 @@ export function organizationSchema() {
     description: brand.summary,
     areaServed: ["Málaga", "Santander", "Madrid", "Ciudad Real"],
     email: legalEntity.email.startsWith("[COMPLETAR") ? undefined : legalEntity.email,
+    telephone: legalEntity.phone.startsWith("[COMPLETAR") ? undefined : legalEntity.phone,
   };
 }
 

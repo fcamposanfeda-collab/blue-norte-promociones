@@ -6,7 +6,7 @@ Nada de esta lista debe inventarse. Cuando exista el dato, se sustituye el marca
 
 - Logotipo (hoy la marca es solo tipográfica).
 - Razón social, CIF, domicilio social e inscripción en el Registro Mercantil.
-- Email general, email de privacidad y teléfono general.
+- Email de privacidad.
 - Dirección, teléfono, email y horario de las oficinas de Málaga, Santander, Madrid y Ciudad Real.
 - Número de WhatsApp (`NEXT_PUBLIC_WHATSAPP_NUMBER`).
 - Proveedor de email real (`EMAIL_PROVIDER=resend`, `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL`).
@@ -21,7 +21,7 @@ Nada de esta lista debe inventarse. Cuando exista el dato, se sustituye el marca
 
 ## Inventario
 
-Calle Sevilla 21 (La Trinidad, Málaga) está en comercialización, con entrega prevista en 2028 y precio por vivienda, sin IVA ni AJD. Las superficies siguen siendo las del proyecto visado. La ficha muestra las tres imágenes de la comercialización: fachada, piscina y plano de cubierta. Siguen pendientes la memoria de calidades, el certificado energético (letra, consumo y emisiones), los planos PDF de las viviendas, un reportaje propio y las distancias comprobadas de transporte y colegios. En la comercialización no figura plaza de garaje.
+Calle Sevilla 21 (La Trinidad, Málaga) está en comercialización, con entrega prevista en 2028 y precio por vivienda, sin IVA ni AJD. Las superficies siguen siendo las del proyecto visado. La ficha muestra las tres imágenes de la comercialización: fachada, piscina y plano de cubierta. Siguen pendientes la memoria de calidades, el certificado energético (letra, consumo y emisiones), los planos PDF de las viviendas y un reportaje propio. El entorno ya nombra paradas EMT, colegios y el metro: los minutos a pie son orientativos. En la comercialización no figura plaza de garaje.
 
 Hay datos del anuncio de Redpiso que no se han copiado porque no coinciden con el proyecto visado: llama ático a la quinta planta, da dos baños en cuarta y quinta, sitúa el patio en planta baja y publica otras superficies construidas. Hay que confirmar cuál de las dos fuentes manda antes de cambiar la tabla.
 

@@ -48,9 +48,9 @@ export const legalEntity = {
   cif: "[COMPLETAR: CIF]",
   address: "[COMPLETAR: domicilio social]",
   registry: "[COMPLETAR: datos de inscripción en el Registro Mercantil]",
-  email: "[COMPLETAR: email de contacto general]",
+  email: "info@bluepromociones.com",
   privacyEmail: "[COMPLETAR: email de privacidad]",
-  phone: "[COMPLETAR: teléfono general]",
+  phone: "+34 687 51 26 48",
 };
 
 export const nav = [

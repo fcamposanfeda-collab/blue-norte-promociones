@@ -198,10 +198,29 @@ export const projects: Project[] = [
     plans: plans("Calle Sevilla 21"),
     surroundings: {
       intro:
-        "El edificio está en Calle Sevilla 21, en el barrio de La Trinidad, distrito Centro de Málaga. El centro de salud Trinidad-Jesús Cautivo está en el número 23 de la misma calle. El resto de servicios, el transporte y los colegios se publicarán cuando las distancias estén comprobadas.",
-      services: ["Centro de salud Trinidad-Jesús Cautivo, Calle Sevilla 23."],
-      transport: ["[COMPLETAR: paradas de autobús, coche y conexión con el centro]"],
-      schools: ["[COMPLETAR: centros educativos de referencia]"],
+        "El edificio está en Calle Sevilla 21, en el barrio de La Trinidad, distrito Centro de Málaga. El centro de salud Trinidad-Jesús Cautivo está en el número 23 de la misma calle. Los tiempos a pie son orientativos, calculados por calle desde el portal, y se redondean al alza.",
+      services: [
+        "Centro de salud Trinidad-Jesús Cautivo, Calle Sevilla 23.",
+        "Hospital Civil, en la avenida del Doctor Gálvez Ginachero, a unos 5 minutos a pie.",
+        "Hospital Materno Infantil, en la avenida Arroyo de los Ángeles, en el mismo entorno.",
+      ],
+      transport: [
+        "Parada Velarde, a unos 5 minutos a pie: líneas 15, 18, circular C2 y nocturno N2.",
+        "Parada Hospital Civil, avenida del Doctor Gálvez Ginachero, a unos 5 minutos: líneas 7, 15, 17, 18 y circular C1. La línea 7 llega a la Alameda Principal.",
+        "Parada Calzada de la Trinidad, en la calle principal del barrio: líneas 15, 18 y circular C1.",
+        "Metro en servicio: estación Guadalmedina, a unos 20 minutos a pie. Desde allí se enlaza con El Perchel y la estación de tren María Zambrano.",
+        "La estación de metro La Trinidad, prevista en la calle Eugenio Gross, está en obras y todavía no se puede usar.",
+      ],
+      schools: [
+        "Escuela infantil Los Enanitos, Calle San Quintín 51, en el barrio.",
+        "Colegio San José de la Montaña, concertado, avenida del Doctor Gálvez Ginachero 4, junto al Hospital Civil.",
+        "CEIP Bergamín, público, Calle Pelayo 16, a unos 10 minutos a pie.",
+        "IES Nuestra Señora de la Victoria, Paseo de Martiricos 11, a unos 10 minutos a pie.",
+      ],
+      places: [
+        "Jardines de Madre Petra, en La Trinidad.",
+        "La Alameda Principal y el centro histórico se alcanzan en autobús con la línea 7 y la circular C1.",
+      ],
     },
     image: "/images/projects/calle-sevilla-21/fachada.jpg",
     imageAlt:

@@ -56,6 +56,7 @@ export type Project = {
     services: string[];
     transport: string[];
     schools: string[];
+    places?: string[];
   };
   image: string;
   imageAlt: string;

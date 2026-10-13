@@ -248,6 +248,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             <List title="Servicios" items={project.surroundings.services} />
             <List title="Transporte" items={project.surroundings.transport} />
             <List title="Colegios" items={project.surroundings.schools} />
+            {project.surroundings.places?.length ? (
+              <List title="Alrededores" items={project.surroundings.places} />
+            ) : null}
           </div>
         </div>
       </Section>
