@@ -21,7 +21,7 @@ Nada de esta lista debe inventarse. Cuando exista el dato, se sustituye el marca
 
 ## Inventario
 
-Calle Sevilla 21 (La Trinidad, Málaga) está en comercialización, con entrega prevista en 2028 y precio por vivienda, sin IVA ni AJD. Las superficies siguen siendo las del proyecto visado. La ficha muestra las tres imágenes de la comercialización: fachada, piscina y plano de cubierta. Siguen pendientes la memoria de calidades, el certificado energético (letra, consumo y emisiones), los planos PDF de las viviendas y un reportaje propio. El entorno ya nombra paradas EMT, colegios y el metro: los minutos a pie son orientativos. En la comercialización no figura plaza de garaje.
+Calle Sevilla 21 (La Trinidad, Málaga) está en comercialización, con entrega prevista en 2028 y precio por vivienda, sin IVA ni AJD. Las superficies siguen siendo las del proyecto visado. La ficha muestra las tres imágenes de la comercialización: fachada, piscina y plano de cubierta. La memoria de calidades ya está publicada en la ficha, en PDF. Siguen pendientes el certificado energético (letra, consumo y emisiones), los planos PDF de las viviendas y un reportaje propio. El entorno ya nombra paradas EMT, colegios y el metro: los minutos a pie son orientativos. En la comercialización no figura plaza de garaje.
 
 Hay datos del anuncio de Redpiso que no se han copiado porque no coinciden con el proyecto visado: llama ático a la quinta planta, da dos baños en cuarta y quinta, sitúa el patio en planta baja y publica otras superficies construidas. Hay que confirmar cuál de las dos fuentes manda antes de cambiar la tabla.
 

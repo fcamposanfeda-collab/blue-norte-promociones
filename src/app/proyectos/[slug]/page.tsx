@@ -196,6 +196,17 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </Section>
       ) : null}
       <Section title="Memoria de calidades">
+        {project.qualityDocument ? (
+          <p className="mt-6">
+            <a
+              href={project.qualityDocument.href}
+              download={project.qualityDocument.fileName}
+              className="underline"
+            >
+              {project.qualityDocument.label}
+            </a>
+          </p>
+        ) : null}
         <SpecList items={project.qualities} />
       </Section>
       <Section title="Zonas comunes" tone="white">

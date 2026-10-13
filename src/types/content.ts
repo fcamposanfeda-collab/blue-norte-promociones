@@ -48,6 +48,7 @@ export type Project = {
   excerpt: string;
   description: string[];
   qualities: SpecItem[];
+  qualityDocument?: { href: string; label: string; fileName: string };
   commonAreas: SpecItem[];
   energy: string[];
   plans: { name: string; note: string }[];

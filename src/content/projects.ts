@@ -49,7 +49,7 @@ export const projects: Project[] = [
     description: [
       "Calle Sevilla 21 es un edificio de viviendas en el barrio de La Trinidad, distrito Centro de Málaga. El programa tiene ocho viviendas y un local en bruto en planta baja. La entrega prevista es 2028.",
       "Las superficies útiles, construidas privativas y construidas con zonas comunes son las del proyecto visado y coinciden con la tasación. En las viviendas, «construida con zonas comunes» incluye la parte proporcional de esas zonas. En el local, esa superficie coincide con la construida privativa.",
-      "La quinta planta es la última del edificio y no es un ático. Hay dos plantas, la tercera y la cuarta, con una sola vivienda. Los precios son los de la comercialización, sin IVA ni AJD. Según la fase de obra se puede reservar y personalizar acabados. La memoria de calidades se publicará cuando esté cerrada.",
+      "La quinta planta es la última del edificio y no es un ático. Hay dos plantas, la tercera y la cuarta, con una sola vivienda. Los precios son los de la comercialización, sin IVA ni AJD. Según la fase de obra se puede reservar y personalizar acabados. La memoria de calidades se puede descargar en esta ficha.",
     ],
     unitsNote:
       "Las superficies coinciden entre el proyecto visado y la tasación. «Con zonas comunes» es la superficie construida con la parte proporcional de zonas comunes. Los precios son de comercialización, sin IVA ni AJD. Notaría y gestoría no están incluidos.",
@@ -171,7 +171,58 @@ export const projects: Project[] = [
         price: "498.000 €",
       },
     ],
-    qualities: qualities(),
+    qualityDocument: {
+      href: "/documents/calle-sevilla-21/memoria-de-calidades.pdf",
+      label: "Descargar la memoria de calidades (PDF)",
+      fileName: "memoria-de-calidades-calle-sevilla-21.pdf",
+    },
+    qualities: [
+      {
+        label: "Albañilería y tabiquería",
+        detail:
+          "Paramentos entre viviendas de ladrillo de hormigón fonorresistente. Tabiquería de yeso con doble placa. Cerramiento de capuchina: ladrillo al exterior y trasdosado interior de pladur con doble placa de 13 mm.",
+      },
+      {
+        label: "Fachada",
+        detail:
+          "Aplacado cerámico antracita con grapa oculta, y tablero fenólico sobre rastreles. Ladrillo cara vista en tono ahumado tostado, ceniza o negro.",
+      },
+      {
+        label: "Carpintería exterior",
+        detail:
+          "Ventanas de PVC en antracita, con jambeado de chapa del color de la carpintería. La memoria deja este punto abierto hasta cerrar la fachada. Persianas de aluminio gris antracita, sin motor. Puerta de acceso de acero inoxidable o aluminio, en color.",
+      },
+      {
+        label: "Carpintería interior",
+        detail:
+          "Puerta de entrada de seguridad de tres puntos, con llaves maestras, en antracita o blanco RAL 9003. Puertas de paso lisas, antracita y correderas, con el riel visto. En el dormitorio principal, armario empotrado de obra: frente de carpintería, cajonera, barra e interior de melamina blanca. Barandillas metálicas tipo Oxirón, antracita.",
+      },
+      {
+        label: "Solados y revestimientos",
+        detail:
+          "Pavimento de las viviendas en cerámico imitación madera. En cocina y baño, cerámico clase 2; en exterior, cerámico clase 3. Zonas comunes en cerámico técnico. Alicatado en los paramentos de la cocina. En baños, pieza de 60×40, con la zona de ducha diferenciada. Recibidor con revestimiento porcelánico. Falso techo de placa de yeso, con registro. Rodapié de PVC.",
+      },
+      {
+        label: "Cocina y baños",
+        detail:
+          "Cocina amueblada, con equipamiento básico y previsión para lavavajillas o mueble. Inodoro Roca Meridian a suelo, rimless. Plato de ducha de resina. Lavabo con mueble y espejo. Grifería de ducha en superficie y grifo de lavabo monoblock, en inox. Mampara de vidrio templado de más de 8 mm. La ducha se independiza con un murete.",
+      },
+      {
+        label: "Climatización y agua caliente",
+        detail:
+          "Climatización por conductos. Agua caliente sanitaria por aerotermia, con hidrokit. Sin ventiladores.",
+      },
+      {
+        label: "Electricidad e iluminación",
+        detail:
+          "Mecanismos antracita en toda la vivienda, sin potenciómetro. Iluminación LED con downlight en baños y cocinas. En el hall, LED en foseados. En zonas comunes, detector de presencia.",
+      },
+      {
+        label: "Saneamiento y telecomunicaciones",
+        detail:
+          "Tubería de saneamiento insonorizada. Tomas de televisión y teléfono en el salón y en el dormitorio principal. Videoportero. En la terraza comunitaria, previsión de grifo y saneamiento.",
+      },
+    ],
     commonAreas: [
       {
         label: "Portal y núcleos",
