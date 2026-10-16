@@ -20,8 +20,9 @@ export function LegalArticle({
         eyebrow="Legal"
         title={title}
         lead={lead}
-        image="/images/contacto.webp"
-        imageAlt="Ilustración de reserva para las páginas legales."
+        image="/images/legal-hero.jpg"
+        imageAlt="Fachada de piedra de un edificio institucional. Imagen de ambiente, no corresponde a una sede concreta."
+        overlayClassName="bg-gradient-to-t from-navy via-navy/55 to-navy/10"
         crumbs={crumbs}
       />
       <article className="py-14">

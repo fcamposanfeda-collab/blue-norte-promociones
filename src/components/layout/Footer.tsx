@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { legalEntity, nav } from "@/content/brand";
+import { legalEntity, madridOffice, nav } from "@/content/brand";
 import { cities } from "@/content/cities";
 
 export function Footer() {
@@ -39,6 +39,7 @@ export function Footer() {
         <div>
           <p className="text-xs tracking-[0.18em] text-stone uppercase">Contacto</p>
           <ul className="mt-4 space-y-3 text-sm">
+            <li>{madridOffice.address}</li>
             <li>
               <a href={`tel:${legalEntity.phone.replaceAll(" ", "")}`} className="hover:underline">
                 {legalEntity.phone}

@@ -12,6 +12,18 @@ export type SpecItem = {
   detail: string;
 };
 
+export type ProjectHighlight = {
+  label: string;
+  value: string;
+};
+
+export type ProjectPlan = {
+  name: string;
+  note?: string;
+  href?: string;
+  fileName?: string;
+};
+
 export type DwellingUnit = {
   floor: string;
   door: string;
@@ -50,8 +62,9 @@ export type Project = {
   qualities: SpecItem[];
   qualityDocument?: { href: string; label: string; fileName: string };
   commonAreas: SpecItem[];
-  energy: string[];
-  plans: { name: string; note: string }[];
+  energy?: string[];
+  highlights?: ProjectHighlight[];
+  plans: ProjectPlan[];
   surroundings: {
     intro: string;
     services: string[];

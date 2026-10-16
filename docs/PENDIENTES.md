@@ -5,34 +5,18 @@ Nada de esta lista debe inventarse. Cuando exista el dato, se sustituye el marca
 ## Marca y legal
 
 - Logotipo (hoy la marca es solo tipográfica).
-- Razón social, CIF, domicilio social e inscripción en el Registro Mercantil.
-- Email de privacidad.
-- Dirección, teléfono, email y horario de las oficinas de Málaga, Santander, Madrid y Ciudad Real.
-- Número de WhatsApp (`NEXT_PUBLIC_WHATSAPP_NUMBER`).
+- Dirección, teléfono, email y horario de las oficinas de Málaga, Santander y Ciudad Real. En Madrid ya está publicada la oficina de Paseo de la Castellana, 140, 14B; falta el horario.
 - Proveedor de email real (`EMAIL_PROVIDER=resend`, `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL`).
 - Identificador de GA4 (`NEXT_PUBLIC_GA_ID`) y verificación de Search Console (`NEXT_PUBLIC_GSC_VERIFICATION`).
 - URL canónica de producción (`NEXT_PUBLIC_SITE_URL`).
 
-## Personas
-
-- Nombre y texto de Dirección.
-- Nombre y texto de Producto y obra.
-- Nombre y texto de Atención al comprador.
-
 ## Inventario
 
-Calle Sevilla 21 (La Trinidad, Málaga) está en comercialización, con entrega prevista en 2028 y precio por vivienda, sin IVA ni AJD. Las superficies siguen siendo las del proyecto visado. La ficha muestra las tres imágenes de la comercialización: fachada, piscina y plano de cubierta. La memoria de calidades ya está publicada en la ficha, en PDF. Siguen pendientes el certificado energético (letra, consumo y emisiones), los planos PDF de las viviendas y un reportaje propio. El entorno ya nombra paradas EMT, colegios y el metro: los minutos a pie son orientativos. En la comercialización no figura plaza de garaje.
+Calle Sevilla 21 (La Trinidad, Málaga) está en comercialización, con entrega prevista en 2028. Superficies y precios de las viviendas son los de las fichas comerciales, desde 283.550 € P.V.P. El local no tiene ficha: sus metros siguen siendo los del visado. La ficha muestra las tres imágenes de la comercialización: fachada, piscina y plano de cubierta. La memoria de calidades ya está publicada en la ficha, en PDF. También están enlazados el plano de venta y la ficha comercial de cada vivienda y de los trasteros. Siguen pendientes el certificado energético (letra, consumo y emisiones) y un reportaje propio. La sección de eficiencia no se muestra en la ficha hasta que exista el certificado. La memoria básica y de ejecución visada el 21/11/2023 remite a un certificado HULC 2019, pero ese impreso no viene en el PDF: no trae letra, kWh ni emisiones. El entorno ya nombra paradas EMT, colegios y el metro: los minutos a pie son orientativos.
 
-Hay datos del anuncio de Redpiso que no se han copiado porque no coinciden con el proyecto visado: llama ático a la quinta planta, da dos baños en cuarta y quinta, sitúa el patio en planta baja y publica otras superficies construidas. Hay que confirmar cuál de las dos fuentes manda antes de cambiar la tabla.
+La tabla de viviendas usa las fichas comerciales, no el cuadro del visado ni el anuncio de Redpiso. Esas dos fuentes siguen sin coincidir con las fichas.
 
-El resto de promociones son **ejemplos editoriales**, no obra a la venta. Hay que sustituirlas o retirarlas:
-
-- Cala Serena (Málaga, este)
-- Altos de Teatinos (Málaga)
-- Paseo Magdalena (Santander)
-- Faro de Cueto (Santander)
-- Patio del Retiro (Madrid)
-- Jardín de Chamberí (Madrid). El estado «entregado» es solo de plantilla: Blue Norte no ha entregado esta promoción.
+Las fichas de ejemplo se han retirado del sitio. En Santander, Madrid y Ciudad Real no hay todavía una promoción publicada.
 
 En cada ficha real faltan, como mínimo:
 

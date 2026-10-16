@@ -39,7 +39,7 @@ export const madrid: CityPage = {
       level: "h3",
       paragraphs: [
         "Retiro combina el parque, una trama residencial tranquila en muchas de sus calles y una presión de demanda alta. La obra nueva, cuando aparece, se mira como rareza. Interesan plantas que aprovechen la orientación —el invierno madrileño es frío y el verano, seco y largo— y elementos comunes que no conviertan el portal en un gasto difícil de explicar.",
-        "[Patio del Retiro](/proyectos/patio-del-retiro) es la ficha de ejemplo para pisos y áticos en ese distrito, en estado próximamente. No adelantamos ni el número de viviendas ni el precio. Si te encaja la zona, la solicitud de información nos dice qué dormitorios buscas y si la casa es para vivir o para invertir.",
+        "Todavía no hay una promoción publicada en Retiro. Si te encaja la zona, la [solicitud de información](/contacto) nos dice qué dormitorios buscas y si la casa es para vivir o para invertir.",
       ],
     },
     {
@@ -48,7 +48,7 @@ export const madrid: CityPage = {
       level: "h3",
       paragraphs: [
         "Chamberí es centro sin ser el casco turístico. Calles con comercio, varias líneas de metro y una edificación densa donde una promoción nueva se nota. El comprador suele conocer ya el barrio y discute distribución, ruido de patio y plaza de garaje más que la «ubicación premium».",
-        "[Jardín de Chamberí](/proyectos/jardin-de-chamberi) enseña cómo archivaríamos una ficha ya entregada. Blue Norte no ha entregado esa promoción ni ninguna otra: el ejemplo existe para que el filtro de estados tenga un caso y para dejar claro que un «entregado» futuro se documentará, no se inventará.",
+        "Todavía no hay una promoción publicada en Chamberí. Cuando exista, la ficha tendrá licencia, calendario y precio. Blue Norte no ha entregado ninguna promoción.",
       ],
     },
     {
@@ -64,7 +64,7 @@ export const madrid: CityPage = {
       id: "siguiente-paso",
       heading: "Cómo pedir información en Madrid",
       paragraphs: [
-        "Filtra las [promociones de Madrid](/proyectos?ciudad=madrid) o escribe desde [contacto](/contacto) con el distrito y los dormitorios. La oficina —dirección, teléfono y horario— está pendiente de publicarse. Hasta entonces no damos un número de centralita inventado.",
+        "Filtra las [promociones de Madrid](/proyectos?ciudad=madrid) o escribe desde [contacto](/contacto) con el distrito y los dormitorios. La oficina está en Paseo de la Castellana, 140, 14B.",
         "Si estás comparando ciudades, Málaga y Santander tienen su propia lectura: [obra nueva en Málaga](/ubicacion/malaga) y [viviendas de obra nueva en Santander](/ubicacion/santander). No repetimos el mismo texto en las tres porque no es el mismo modo de vivir.",
       ],
     },
@@ -76,9 +76,9 @@ export const madrid: CityPage = {
         "No. Somos promotora de obra nueva. No publicamos alquileres ni viviendas de segunda mano.",
     },
     {
-      question: "¿Tenéis promociones en otros distritos además de Retiro y Chamberí?",
+      question: "¿En qué distritos de Madrid hay promociones?",
       answer:
-        "Las fichas de esos distritos son ejemplos. El ámbito de la marca en la región es Madrid; los distritos reales se anunciarán con cada proyecto.",
+        "Todavía no hay una promoción publicada en Madrid. Los distritos se anunciarán con cada proyecto.",
     },
     {
       question: "¿Publicáis la rentabilidad de la inversión?",

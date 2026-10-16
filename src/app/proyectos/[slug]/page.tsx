@@ -121,6 +121,21 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </Container>
       </section>
 
+      {project.highlights?.length ? (
+        <Section title="Características">
+          <ul className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+            {project.highlights.map((item) => (
+              <li key={item.label} className="border border-line bg-white px-4 py-5 text-center">
+                <HighlightIcon label={item.label} />
+                <p className="mt-3 text-xs tracking-[0.14em] text-muted uppercase">{item.label}</p>
+                <p className="mt-1 font-medium">{item.value}</p>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-4 text-sm text-muted">Información orientativa, sin carácter contractual.</p>
+        </Section>
+      ) : null}
+
       {project.gallery?.length ? (
         <Section title="Imágenes">
           <div className="mt-6 grid gap-4 md:grid-cols-2">
@@ -159,8 +174,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                     "Dormitorios",
                     "Baños",
                     "Útil (m²)",
-                    "Construida privativa (m²)",
-                    "Construida con zonas comunes (m²)",
+                    "Zonas comunes (m²)",
+                    "Construida (m²)",
                     "Terraza o patio (m²)",
                     ...(project.units.some((unit) => unit.price) ? ["Precio"] : []),
                   ].map((heading) => (
@@ -200,38 +215,62 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           <p className="mt-6">
             <a
               href={project.qualityDocument.href}
-              download={project.qualityDocument.fileName}
+              target="_blank"
+              rel="noopener noreferrer"
               className="underline"
             >
               {project.qualityDocument.label}
             </a>
           </p>
         ) : null}
-        <SpecList items={project.qualities} />
+        <SpecList items={project.qualities} as="details" />
       </Section>
       <Section title="Zonas comunes" tone="white">
         <SpecList items={project.commonAreas} />
       </Section>
-      <Section title="Eficiencia energética">
-        {project.energy.map((paragraph) => (
-          <p key={paragraph} className="mt-4 max-w-3xl text-muted">
-            <PendingText text={paragraph} />
+      {project.energy?.length ? (
+        <Section title="Eficiencia energética">
+          {project.energy.map((paragraph) => (
+            <p key={paragraph} className="mt-4 max-w-3xl text-muted">
+              <PendingText text={paragraph} />
+            </p>
+          ))}
+          <p className="mt-4">
+            <Link href="/actualidad/calificacion-energetica-a" className="underline">
+              Qué significa la calificación energética A
+            </Link>
           </p>
-        ))}
-        <p className="mt-4">
-          <Link href="/actualidad/calificacion-energetica-a" className="underline">
-            Qué significa la calificación energética A
-          </Link>
+        </Section>
+      ) : null}
+      <Section title="Planos" tone="white">
+        <p className="mt-4 max-w-3xl text-muted">
+          Plano general de venta y ficha comercial de cada vivienda y de los trasteros. Son orientativos y no
+          tienen carácter contractual. Las superficies y los precios de la tabla de esta página son los de
+          esas fichas.
         </p>
-      </Section>
-      <Section title="Planos descargables" tone="white">
-        <ul className="mt-6 grid gap-3">
+        <ul className="mt-6 grid gap-3 md:grid-cols-2">
           {project.plans.map((plan) => (
-            <li key={plan.name} className="border border-line bg-ivory px-4 py-3">
-              <p className="font-medium">{plan.name}</p>
-              <p className="text-sm">
-                <PendingText text={plan.note} />
-              </p>
+            <li key={plan.name} className="border border-line bg-ivory">
+              {plan.href ? (
+                <a
+                  href={plan.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex min-h-14 items-center justify-between gap-4 px-4 py-3"
+                >
+                  <span className="font-medium">{plan.name}</span>
+                  <span className="text-sm underline">PDF</span>
+                </a>
+              ) : (
+                <div className="px-4 py-3">
+                  <p className="font-medium">{plan.name}</p>
+                  {plan.note ? (
+                    <p className="text-sm">
+                      <PendingText text={plan.note} />
+                    </p>
+                  ) : null}
+                </div>
+              )}
             </li>
           ))}
         </ul>
@@ -295,16 +334,18 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </Container>
       </section>
 
-      <section className="pb-16">
-        <Container>
-          <h2 className="text-4xl">Otras promociones</h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {related.map((item) => (
-              <ProjectCard key={item.slug} project={item} />
-            ))}
-          </div>
-        </Container>
-      </section>
+      {related.length > 0 ? (
+        <section className="pb-16">
+          <Container>
+            <h2 className="text-4xl">Otras promociones</h2>
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
+              {related.map((item) => (
+                <ProjectCard key={item.slug} project={item} />
+              ))}
+            </div>
+          </Container>
+        </section>
+      ) : null}
       <StickyCta name={project.name} />
     </article>
   );
@@ -338,7 +379,30 @@ function Section({
   );
 }
 
-function SpecList({ items }: { items: { label: string; detail: string }[] }) {
+function SpecList({
+  items,
+  as = "cards",
+}: {
+  items: { label: string; detail: string }[];
+  as?: "cards" | "details";
+}) {
+  if (as === "details") {
+    return (
+      <ul className="mt-6 grid gap-3">
+        {items.map((item) => (
+          <li key={item.label} className="border border-line bg-white">
+            <details>
+              <summary className="cursor-pointer px-4 py-3 font-medium">{item.label}</summary>
+              <p className="px-4 pb-4 text-sm text-muted">
+                <PendingText text={item.detail} />
+              </p>
+            </details>
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
   return (
     <ul className="mt-6 grid gap-4 md:grid-cols-2">
       {items.map((item) => (
@@ -350,6 +414,51 @@ function SpecList({ items }: { items: { label: string; detail: string }[] }) {
         </li>
       ))}
     </ul>
+  );
+}
+
+function HighlightIcon({ label }: { label: string }) {
+  const common = "mx-auto h-8 w-8 text-navy";
+  if (label === "Baños") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true" className={common} fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M5 12h14v3a5 5 0 0 1-5 5H10a5 5 0 0 1-5-5v-3z" />
+        <path d="M7 12V8a2 2 0 0 1 2-2h1" />
+        <path d="M8 21v-1M16 21v-1" />
+      </svg>
+    );
+  }
+  if (label === "Cocina") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true" className={common} fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M5 10h14v9H5z" />
+        <path d="M8 10V6M12 10V5M16 10V6" />
+        <path d="M9 14h.01M15 14h.01" />
+      </svg>
+    );
+  }
+  if (label === "Garaje") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true" className={common} fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M4 20V10l8-6 8 6v10" />
+        <path d="M8 20v-6h8v6" />
+      </svg>
+    );
+  }
+  if (label === "Trastero") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true" className={common} fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M4 8h16v12H4z" />
+        <path d="M4 12h16M12 12v8" />
+        <path d="M8 8V6h8v2" />
+      </svg>
+    );
+  }
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className={common} fill="none" stroke="currentColor" strokeWidth="1.5">
+      <path d="M4 20V11l4-3V6h3v2.2L20 14v6" />
+      <path d="M10 20v-4h4v4" />
+    </svg>
   );
 }
 

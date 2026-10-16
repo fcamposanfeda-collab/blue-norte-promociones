@@ -93,8 +93,7 @@ export default function HomePage() {
             <p className="text-xs tracking-[0.2em] text-accent-ink uppercase">Promociones</p>
             <h2 className="mt-3 max-w-xl text-4xl md:text-5xl">Una selección para empezar a mirar</h2>
             <p className="mt-4 max-w-2xl text-muted">
-              Calle Sevilla 21, en Málaga, ya está en comercialización. El resto de fichas son
-              ejemplos editoriales. El precio y la fecha de entrega se publican cuando son reales.
+              Edificio Pozuelo, en Calle Sevilla 21 (Málaga), ya está en comercialización.
             </p>
           </Reveal>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">

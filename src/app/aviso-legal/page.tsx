@@ -22,7 +22,7 @@ export default function LegalNoticePage() {
         {
           heading: "Titular",
           paragraphs: [
-            `Denominación: ${legalEntity.name}.`,
+            `Denominación: ${legalEntity.name.replace(/\.$/, "")}.`,
             `CIF: ${legalEntity.cif}.`,
             `Domicilio: ${legalEntity.address}.`,
             `Inscripción: ${legalEntity.registry}.`,
@@ -33,7 +33,6 @@ export default function LegalNoticePage() {
           heading: "Objeto",
           paragraphs: [
             "Este sitio presenta a Blue Norte Promociones y sus promociones de vivienda de obra nueva. La información comercial —precios, superficies, planos e imágenes— es orientativa hasta que se incorpore a un contrato.",
-            "Las fichas marcadas como ejemplo editorial no corresponden a promociones a la venta.",
           ],
         },
         {

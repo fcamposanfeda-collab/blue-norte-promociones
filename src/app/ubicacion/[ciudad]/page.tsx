@@ -72,7 +72,7 @@ export default async function CityPage({ params }: { params: Promise<{ ciudad: s
       <section className="bg-white py-16">
         <Container>
           <h2 className="text-4xl">
-            {related.length > 0 ? `Promociones de ejemplo en ${city.name}` : `Promociones en ${city.name}`}
+            {`Promociones en ${city.name}`}
           </h2>
           {related.length > 0 ? (
             <div className="mt-8 grid gap-6 md:grid-cols-2">

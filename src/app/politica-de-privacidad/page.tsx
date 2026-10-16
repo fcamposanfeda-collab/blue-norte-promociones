@@ -22,7 +22,7 @@ export default function PrivacyPage() {
         {
           heading: "Responsable",
           paragraphs: [
-            `Responsable: ${legalEntity.name}.`,
+            `Responsable: ${legalEntity.name.replace(/\.$/, "")}.`,
             `Contacto de privacidad: ${legalEntity.privacyEmail}.`,
             `Domicilio: ${legalEntity.address}.`,
           ],

@@ -8,49 +8,22 @@ export const brand = {
     "Las imágenes, infografías y planos son orientativos y no tienen carácter contractual. Las superficies, precios y fechas se publicarán cuando estén confirmados.",
 };
 
-export const offices = [
-  {
-    city: "Málaga",
-    slug: "malaga" as const,
-    address: "[COMPLETAR: dirección de la oficina de Málaga]",
-    phone: "[COMPLETAR: teléfono Málaga]",
-    email: "[COMPLETAR: email Málaga]",
-    hours: "[COMPLETAR: horario Málaga]",
-  },
-  {
-    city: "Santander",
-    slug: "santander" as const,
-    address: "[COMPLETAR: dirección de la oficina de Santander]",
-    phone: "[COMPLETAR: teléfono Santander]",
-    email: "[COMPLETAR: email Santander]",
-    hours: "[COMPLETAR: horario Santander]",
-  },
-  {
-    city: "Madrid",
-    slug: "madrid" as const,
-    address: "[COMPLETAR: dirección de la oficina de Madrid]",
-    phone: "[COMPLETAR: teléfono Madrid]",
-    email: "[COMPLETAR: email Madrid]",
-    hours: "[COMPLETAR: horario Madrid]",
-  },
-  {
-    city: "Ciudad Real",
-    slug: "ciudad-real" as const,
-    address: "[COMPLETAR: dirección de la oficina de Ciudad Real]",
-    phone: "[COMPLETAR: teléfono Ciudad Real]",
-    email: "[COMPLETAR: email Ciudad Real]",
-    hours: "[COMPLETAR: horario Ciudad Real]",
-  },
-];
-
 export const legalEntity = {
-  name: "[COMPLETAR: razón social]",
-  cif: "[COMPLETAR: CIF]",
-  address: "[COMPLETAR: domicilio social]",
-  registry: "[COMPLETAR: datos de inscripción en el Registro Mercantil]",
+  name: "BLUENORTE INVERSIONES MALAGA I, S.L.",
+  cif: "B26969527",
+  address: "Paseo de la Castellana, n.º 140, planta 14, puerta B, 28046 Madrid",
+  registry:
+    "Registro Mercantil de Madrid, hoja M-829652, n.º de entrada 1/2026/48744, asiento de presentación 10/2026/7080",
   email: "info@bluepromociones.com",
-  privacyEmail: "[COMPLETAR: email de privacidad]",
+  privacyEmail: "info@bluepromociones.com",
   phone: "+34 687 51 26 48",
+};
+
+export const madridOffice = {
+  city: "Madrid",
+  address: "Paseo de la Castellana, 140, 14B",
+  phone: legalEntity.phone,
+  email: legalEntity.email,
 };
 
 export const nav = [
@@ -126,23 +99,5 @@ export const processSteps = [
   {
     title: "Entregamos",
     text: "La entrega incluye recorrido de la vivienda, repaso de acabados y la documentación que corresponde. El después también forma parte del oficio.",
-  },
-];
-
-export const team = [
-  {
-    role: "Dirección",
-    name: "[COMPLETAR: nombre]",
-    bio: "[COMPLETAR: presentación breve de la persona que dirige la promotora]",
-  },
-  {
-    role: "Producto y obra",
-    name: "[COMPLETAR: nombre]",
-    bio: "[COMPLETAR: presentación de quien coordina proyecto y construcción]",
-  },
-  {
-    role: "Atención al comprador",
-    name: "[COMPLETAR: nombre]",
-    bio: "[COMPLETAR: presentación de quien acompaña la información y las visitas]",
   },
 ];

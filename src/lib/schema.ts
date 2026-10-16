@@ -1,4 +1,4 @@
-import { brand, legalEntity } from "@/content/brand";
+import { brand, legalEntity, madridOffice } from "@/content/brand";
 import { absoluteUrl, siteName, siteUrl } from "@/lib/site";
 import type { Crumb, FaqItem, Post, Project } from "@/types/content";
 
@@ -7,11 +7,21 @@ export function organizationSchema() {
     "@context": "https://schema.org",
     "@type": ["Organization", "RealEstateAgent"],
     name: siteName,
+    legalName: legalEntity.name,
+    taxID: legalEntity.cif,
     url: siteUrl,
     description: brand.summary,
     areaServed: ["Málaga", "Santander", "Madrid", "Ciudad Real"],
     email: legalEntity.email.startsWith("[COMPLETAR") ? undefined : legalEntity.email,
     telephone: legalEntity.phone.startsWith("[COMPLETAR") ? undefined : legalEntity.phone,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Paseo de la Castellana, 140, planta 14, puerta B",
+      postalCode: "28046",
+      addressLocality: madridOffice.city,
+      addressRegion: "Madrid",
+      addressCountry: "ES",
+    },
   };
 }
 

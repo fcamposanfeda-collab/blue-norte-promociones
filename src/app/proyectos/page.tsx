@@ -53,9 +53,9 @@ export default async function ProjectsPage({
       <PageHero
         eyebrow="Proyectos"
         title="Promociones de vivienda nueva"
-        lead="Pisos, áticos, adosados y unifamiliares de obra nueva. Las fichas actuales son ejemplos hasta que publiquemos el inventario real."
-        image="/images/hero.webp"
-        imageAlt="Ilustración de reserva para el listado de promociones de Blue Norte."
+        image="/images/proyectos-hero.jpg"
+        imageAlt="Render de referencia de un edificio de viviendas de obra nueva."
+        imageClassName="object-[center_45%]"
         crumbs={[
           { name: "Inicio", href: "/" },
           { name: "Proyectos" },
@@ -67,7 +67,7 @@ export default async function ProjectsPage({
           <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
             <p>
               <strong>{label}</strong>
-              {hasProjectFilters(query) ? " con estos filtros" : " en el catálogo de ejemplo"}
+              {hasProjectFilters(query) ? " con estos filtros" : null}
             </p>
             {hasProjectFilters(query) ? (
               <Link href="/proyectos" className="text-sm underline">
@@ -77,8 +77,7 @@ export default async function ProjectsPage({
           </div>
           {results.length === 0 ? (
             <p className="mt-10 max-w-xl">
-              Ninguna promoción de ejemplo coincide. Prueba con otros filtros o vuelve al listado
-              completo.
+              Ninguna promoción coincide. Prueba con otros filtros o vuelve al listado completo.
             </p>
           ) : (
             <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">

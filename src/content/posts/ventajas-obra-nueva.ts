@@ -31,7 +31,7 @@ export const ventajasObraNueva: Post = {
     },
     {
       type: "p",
-      text: "Eso no significa que cualquier plano nuevo sea bueno. Hay promociones que repiten una pastilla estrecha para caber más viviendas. Pide el plano acotado de la unidad que reservas y mídelo con tus muebles, no con el render. En las fichas de Blue Norte los planos se publicarán como archivo descargable; mientras son ejemplos, el hueco está marcado como pendiente.",
+      text: "Eso no significa que cualquier plano nuevo sea bueno. Hay promociones que repiten una pastilla estrecha para caber más viviendas. Pide el plano acotado de la unidad que reservas y mídelo con tus muebles, no con el render. En las fichas de Blue Norte los planos se abren en el navegador cuando existen. Si aún no están, el hueco queda marcado como pendiente.",
     },
     {
       type: "h2",
@@ -89,7 +89,7 @@ export const ventajasObraNueva: Post = {
     },
     {
       type: "p",
-      text: "Blue Norte vende solo vivienda nueva en [Málaga](/ubicacion/malaga), [Santander](/ubicacion/santander), [Madrid](/ubicacion/madrid) y [Ciudad Real](/ubicacion/ciudad-real). Puedes revisar las [promociones](/proyectos) —hoy, fichas de ejemplo salvo Calle Sevilla 21— o [pedir información](/contacto) con la ciudad y los dormitorios que buscas.",
+      text: "Blue Norte vende solo vivienda nueva en [Málaga](/ubicacion/malaga), [Santander](/ubicacion/santander), [Madrid](/ubicacion/madrid) y [Ciudad Real](/ubicacion/ciudad-real). Puedes revisar las [promociones](/proyectos) o [pedir información](/contacto) con la ciudad y los dormitorios que buscas.",
     },
   ],
   faq: [

@@ -31,7 +31,7 @@ export const sobrePlano: Post = {
     },
     {
       type: "p",
-      text: "En Blue Norte, mientras una promoción sea un ejemplo editorial, esos archivos aparecen como pendientes. Cuando haya una promoción real, estarán en su ficha, dentro de [proyectos](/proyectos).",
+      text: "En Blue Norte, si un documento todavía no está cerrado, la ficha lo marca como pendiente. Cuando exista, estará en [proyectos](/proyectos).",
     },
     {
       type: "h2",
@@ -103,7 +103,7 @@ export const sobrePlano: Post = {
     },
     {
       type: "p",
-      text: "Cuando tengas zona y dormitorios claros, [solicita información](/contacto). Te diremos si hay una promoción que encaje o si todavía estamos en fase de ejemplo y escucha.",
+      text: "Cuando tengas zona y dormitorios claros, [solicita información](/contacto). Te diremos si hay una promoción que encaje o si en esa ciudad todavía no hay ficha publicada.",
     },
   ],
   faq: [

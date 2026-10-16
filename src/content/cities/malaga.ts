@@ -37,7 +37,7 @@ export const malaga: CityPage = {
       level: "h3",
       paragraphs: [
         "El este de Málaga atrae a quien quiere playa y servicios urbanos en el mismo recorrido. Hay barrios consolidados, con comercio de proximidad, y piezas de costa más abiertas. Una promoción de pisos y áticos encaja aquí cuando la orientación y la terraza están bien resueltas: no basta con decir que «hay mar». Hay que saber qué se ve desde cada planta y qué sol entra en agosto.",
-        "La ficha de ejemplo [Cala Serena](/proyectos/cala-serena) sirve para mostrar ese producto —pisos y áticos en comercialización— mientras no exista una promoción real con precio y planos contractuales. Si buscas esa zona, el formulario de la ficha recoge el interés sin adelantar datos que todavía no tenemos.",
+        "Todavía no hay una promoción publicada en el este de Málaga. Si buscas esa zona, el [formulario de contacto](/contacto) recoge el interés sin adelantar datos que todavía no tenemos.",
       ],
     },
     {
@@ -46,7 +46,7 @@ export const malaga: CityPage = {
       level: "h3",
       paragraphs: [
         "Teatinos creció con la universidad, los hospitales y una oferta amplia de vivienda nueva. Es un lugar práctico para quien trabaja en el oeste o quiere un adosado con algo de espacio exterior sin irse a un pueblo de la provincia. También es un mercado donde conviene comparar calidades de verdad: hay mucha oferta y no toda está pensada para durar igual.",
-        "[Altos de Teatinos](/proyectos/altos-de-teatinos) es nuestro ejemplo de adosados en ese entorno, marcado como promoción en construcción solo para enseñar la plantilla. No hay obra abierta a nombre de Blue Norte hasta que se publique un proyecto con licencia, plazos y memoria.",
+        "Todavía no hay una promoción publicada en Teatinos. No hay obra abierta a nombre de Blue Norte en ese entorno hasta que se publique un proyecto con licencia, plazos y memoria.",
       ],
     },
     {
@@ -76,12 +76,12 @@ export const malaga: CityPage = {
     {
       question: "¿Hay ya un precio de salida en Málaga?",
       answer:
-        "No publicamos precios hasta que estén confirmados. En las fichas de ejemplo verás el marcador de precio pendiente en lugar de una cifra estimada.",
+        "En Edificio Pozuelo, Calle Sevilla 21, los precios publicados son el P.V.P. de las fichas comerciales. En el resto de la ciudad no hay todavía otra promoción con precio.",
     },
     {
       question: "¿Puedo visitar una promoción en Málaga?",
       answer:
-        "Cuando haya una promoción en comercialización, la visita se pide desde su ficha o desde el formulario de contacto. Hoy las fichas son ejemplos editoriales.",
+        "Edificio Pozuelo, en Calle Sevilla 21 (La Trinidad), está en comercialización. La visita se pide desde su ficha o desde el formulario de contacto. En el resto de la ciudad todavía no hay otra promoción publicada.",
     },
   ],
 };

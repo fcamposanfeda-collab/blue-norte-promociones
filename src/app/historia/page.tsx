@@ -1,7 +1,6 @@
 import { PageHero } from "@/components/layout/PageHero";
-import { PendingText } from "@/components/ui/PendingText";
 import { Container } from "@/components/ui/Container";
-import { processSteps, team } from "@/content/brand";
+import { processSteps } from "@/content/brand";
 import { buildMetadata } from "@/lib/site";
 
 export const metadata = buildMetadata({
@@ -18,8 +17,8 @@ export default function HistoryPage() {
         eyebrow="Historia"
         title="Una promotora que empieza"
         lead="No venimos a recitar décadas que no hemos vivido. Blue Norte nace para hacer vivienda nueva en Málaga, Santander, Madrid y Ciudad Real, y para explicarla con la misma claridad con la que se construye."
-        image="/images/historia.webp"
-        imageAlt="Ilustración de reserva para la página de historia de Blue Norte."
+        image="/images/historia-hero.jpg"
+        imageAlt="Inicio de una obra de vivienda, con grúa y cimentación. Imagen de ambiente, no corresponde a una promoción concreta."
         crumbs={[
           { name: "Inicio", href: "/" },
           { name: "Historia" },
@@ -67,26 +66,6 @@ export default function HistoryPage() {
                 </li>
               ))}
             </ol>
-          </section>
-          <section>
-            <h2 className="text-4xl">Equipo</h2>
-            <p className="mt-4 max-w-2xl text-muted">
-              Los nombres se publicarán cuando las personas que representan a la marca den su
-              conformidad. Hasta entonces, estos son los cometidos.
-            </p>
-            <ul className="mt-8 grid gap-4 md:grid-cols-3">
-              {team.map((person) => (
-                <li key={person.role} className="border border-line p-5">
-                  <p className="text-xs tracking-[0.16em] text-accent-ink uppercase">{person.role}</p>
-                  <p className="mt-2 font-serif text-3xl">
-                    <PendingText text={person.name} />
-                  </p>
-                  <p className="mt-3 text-sm text-muted">
-                    <PendingText text={person.bio} />
-                  </p>
-                </li>
-              ))}
-            </ul>
           </section>
         </Container>
       </article>

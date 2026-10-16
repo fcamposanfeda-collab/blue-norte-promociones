@@ -80,7 +80,7 @@ export const calificacionEnergetica: Post = {
     },
     {
       type: "p",
-      text: "Blue Norte no adelanta la letra de sus promociones. En cada ficha hay un apartado de eficiencia con el dato pendiente hasta que el técnico lo firme. Puedes ver cómo está planteado en cualquier ejemplo del [listado](/proyectos), y el contexto de clima en [Málaga](/ubicacion/malaga), [Santander](/ubicacion/santander), [Madrid](/ubicacion/madrid) o [Ciudad Real](/ubicacion/ciudad-real).",
+      text: "Blue Norte no adelanta la letra de sus promociones. En cada ficha hay un apartado de eficiencia con el dato pendiente hasta que el técnico lo firme. Puedes verlo en [Edificio Pozuelo](/proyectos/calle-sevilla-21), y el contexto de clima en [Málaga](/ubicacion/malaga), [Santander](/ubicacion/santander), [Madrid](/ubicacion/madrid) o [Ciudad Real](/ubicacion/ciudad-real).",
     },
     {
       type: "p",

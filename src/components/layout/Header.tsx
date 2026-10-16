@@ -42,8 +42,7 @@ export function Header() {
     >
       <div className="mx-auto flex h-[var(--header)] max-w-6xl items-center justify-between gap-4 px-5 md:px-8">
         <Link href="/" className="leading-none" aria-label="Blue Norte Promociones, inicio">
-          <span className="block font-serif text-2xl tracking-tight">Blue Norte</span>
-          <span className="block text-[0.68rem] tracking-[0.22em] uppercase">Promociones</span>
+          <img src="/brand/logo-header.svg" alt="" className="h-20 w-auto" />
         </Link>
         <nav className="hidden items-center gap-6 lg:flex" aria-label="Principal">
           {nav.map((item) => {

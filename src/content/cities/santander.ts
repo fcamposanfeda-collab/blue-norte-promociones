@@ -31,7 +31,7 @@ export const santander: CityPage = {
       level: "h3",
       paragraphs: [
         "El entorno de la Magdalena es una de las direcciones más reconocibles de Santander: paseo, palacio, playas urbanas y una trama residencial ya hecha. La obra nueva aquí es escasa y, cuando aparece, se juzga por cómo encaja en esa trama, no por imitar un resort. Interesan portales claros, viviendas con luz real —difícil en calles estrechas— y una memoria que detalle el comportamiento frente a la humedad.",
-        "La ficha [Paseo Magdalena](/proyectos/paseo-magdalena) muestra ese relato en formato de promoción en comercialización. Es un ejemplo. No hay precios, superficies ni fecha de entrega porque no hay todavía un edificio que los sostenga. Sirve para que quien quiera pisos en esa zona nos deje el tipo de casa que busca.",
+        "Todavía no hay una promoción publicada junto a la Magdalena. Si buscas pisos en esa zona, el [formulario de contacto](/contacto) recoge el tipo de casa que quieres.",
       ],
     },
     {
@@ -40,7 +40,7 @@ export const santander: CityPage = {
       level: "h3",
       paragraphs: [
         "Cueto queda al norte del municipio, más abierto, con una mezcla de vivienda antigua y piezas nuevas. Es el lugar donde una promoción de unifamiliares tiene sentido para quien no quiere un piso y tampoco desea irse a otro concejo. El proyecto tiene que resolver parcela, linderos, viento y el acceso cotidiano al centro, no solo la foto del jardín.",
-        "[Faro de Cueto](/proyectos/faro-de-cueto) está marcada como «próximamente». En una promotora nueva, ese estado es una lista de espera, no una cuenta atrás inventada. Si más adelante hay licencia y calendario, la ficha pasará a comercialización con datos comprobables.",
+        "Todavía no hay una promoción publicada en Cueto. Si más adelante hay licencia y calendario, la ficha pasará a comercialización con datos comprobables.",
       ],
     },
     {
@@ -66,7 +66,7 @@ export const santander: CityPage = {
     {
       question: "¿Las promociones de Santander están a la venta?",
       answer:
-        "Las fichas actuales son ejemplos editoriales. Paseo Magdalena simula una comercialización y Faro de Cueto, un aviso de próxima salida. No hay inventario real publicado.",
+        "Todavía no hay una promoción publicada en Santander. Cuando exista, tendrá precio, superficies y fecha de entrega.",
     },
     {
       question: "¿Construís también en otros municipios de Cantabria?",

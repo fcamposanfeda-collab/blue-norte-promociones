@@ -10,6 +10,7 @@ export function PageHero({
   image,
   imageAlt = "",
   imageClassName = "",
+  overlayClassName = "bg-gradient-to-t from-navy via-navy/55 to-navy/20",
   crumbs,
 }: {
   eyebrow?: string;
@@ -18,6 +19,7 @@ export function PageHero({
   image?: string;
   imageAlt?: string;
   imageClassName?: string;
+  overlayClassName?: string;
   crumbs?: Crumb[];
 }) {
   return (
@@ -34,7 +36,7 @@ export function PageHero({
           />
         ) : null}
       </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/55 to-navy/20" />
+      <div className={`absolute inset-0 ${overlayClassName}`} />
       <Container className="relative z-10 pt-32 pb-14">
         {crumbs ? <Breadcrumbs items={crumbs} /> : null}
         {eyebrow ? <p className="mt-4 text-xs tracking-[0.22em] text-sand uppercase">{eyebrow}</p> : null}
