@@ -8,7 +8,7 @@ Nada de esta lista debe inventarse. Cuando exista el dato, se sustituye el marca
 - Dirección, teléfono, email y horario de las oficinas de Málaga, Santander y Ciudad Real. En Madrid ya está publicada la oficina de Paseo de la Castellana, 140, 14B; falta el horario.
 - Proveedor de email real (`EMAIL_PROVIDER=resend`, `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL`).
 - Identificador de GA4 (`NEXT_PUBLIC_GA_ID`) y verificación de Search Console (`NEXT_PUBLIC_GSC_VERIFICATION`).
-- URL canónica de producción (`NEXT_PUBLIC_SITE_URL`).
+- Dominio propio. La web pública está en https://blue-norte-promociones.vercel.app. bluepromociones.com sigue en el alojamiento de Raiola y no muestra esta web. Cuando el dominio apunte aquí, hay que poner `NEXT_PUBLIC_SITE_URL=https://bluepromociones.com` y volver a desplegar.
 
 ## Inventario
 

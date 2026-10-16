@@ -2,10 +2,27 @@ import type { Metadata } from "next";
 
 export const siteName = "Blue Norte Promociones";
 
-export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(
-  /\/$/,
-  "",
-);
+const productionHost = "blue-norte-promociones.vercel.app";
+
+function isLocalUrl(value: string) {
+  return /localhost|127\.0\.0\.1/i.test(value);
+}
+
+function resolveSiteUrl() {
+  const configured = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/$/, "");
+  if (configured && !isLocalUrl(configured)) return configured;
+
+  const vercelProduction = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim()
+    .replace(/^https?:\/\//, "")
+    .replace(/\/$/, "");
+  if (vercelProduction && !isLocalUrl(vercelProduction)) return `https://${vercelProduction}`;
+
+  if (process.env.VERCEL_ENV === "production") return `https://${productionHost}`;
+
+  return configured || "http://localhost:3000";
+}
+
+export const siteUrl = resolveSiteUrl();
 
 export function absoluteUrl(path: string) {
   return `${siteUrl}${path}`;
@@ -27,7 +44,7 @@ export function buildMetadata(input: {
     );
   }
 
-  const index = input.index !== false;
+  const index = input.index !== false && process.env.VERCEL_ENV !== "preview";
 
   return {
     title: { absolute: input.title },
@@ -41,6 +58,12 @@ export function buildMetadata(input: {
       siteName,
       locale: "es_ES",
       type: input.type ?? "website",
+      images: [
+        {
+          url: "/images/hero-fachada.jpg",
+          alt: "Fachada de referencia de una vivienda de obra nueva de Blue Norte Promociones.",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
