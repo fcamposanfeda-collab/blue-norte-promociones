@@ -219,6 +219,22 @@ export const projects: Project[] = [
         detail: "Circuito cerrado de seguridad.",
       },
     ],
+    energyCertificate: {
+      intro:
+        "Certificado del proyecto del bloque completo, de 10 de octubre de 2023, en zona climática A3.",
+      ratings: [
+        {
+          label: "Consumo de energía primaria no renovable",
+          letter: "B",
+          value: "19,89 kWh/m²·año",
+        },
+        {
+          label: "Emisiones de CO₂",
+          letter: "B",
+          value: "3,49 kgCO₂/m²·año",
+        },
+      ],
+    },
     highlights: [
       { label: "Dormitorios", value: "1–2" },
       { label: "Baños", value: "1–2" },

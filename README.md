@@ -30,9 +30,11 @@ El idioma activo es el español de España. `src/i18n` deja el tipo de locale pr
 
 ## Formulario
 
-`POST /api/contacto` valida con Zod, ignora el campo señuelo `company_website` y exige la casilla de privacidad.
+El formulario de contacto valida con Zod, ignora el campo señuelo `company_website` y exige la casilla de privacidad. El envío sale del navegador hacia Web3Forms con `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`.
 
-- `EMAIL_PROVIDER=console` deja el mensaje en el log del servidor. Sirve en local.
+`POST /api/contacto` sigue disponible como vía alternativa y no lo usa el formulario:
+
+- `EMAIL_PROVIDER=console` deja el mensaje en el log del servidor.
 - `EMAIL_PROVIDER=resend` envía con la API de Resend. Hacen falta `RESEND_API_KEY`, `CONTACT_FROM_EMAIL` y `CONTACT_TO_EMAIL`.
 
 ## Analítica

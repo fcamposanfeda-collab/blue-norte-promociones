@@ -44,7 +44,7 @@ export const ventajasObraNueva: Post = {
     },
     {
       type: "p",
-      text: "Si quieres el detalle de qué mide la mejor letra de la escala, está en [qué significa la calificación energética A](/actualidad/calificacion-energetica-a). La letra de una promoción concreta de Blue Norte se publicará cuando exista el certificado, no antes.",
+      text: "Si quieres el detalle de qué mide la mejor letra de la escala, está en [qué significa la calificación energética A](/actualidad/calificacion-energetica-a). La letra se publica cuando existe el certificado. En Edificio Pozuelo es una B en consumo y una B en emisiones.",
     },
     {
       type: "h2",

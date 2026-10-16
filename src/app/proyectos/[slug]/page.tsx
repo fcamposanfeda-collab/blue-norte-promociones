@@ -228,16 +228,21 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <Section title="Zonas comunes" tone="white">
         <SpecList items={project.commonAreas} />
       </Section>
-      {project.energy?.length ? (
+      {project.energyCertificate ? (
         <Section title="Eficiencia energética">
-          {project.energy.map((paragraph) => (
-            <p key={paragraph} className="mt-4 max-w-3xl text-muted">
-              <PendingText text={paragraph} />
-            </p>
-          ))}
+          <p className="mt-4 max-w-3xl text-muted">{project.energyCertificate.intro}</p>
+          <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+            {project.energyCertificate.ratings.map((item) => (
+              <li key={item.label} className="border border-line bg-white px-4 py-5 text-center">
+                <p className="font-serif text-5xl text-accent">{item.letter}</p>
+                <p className="mt-3 text-xs tracking-[0.14em] text-muted uppercase">{item.label}</p>
+                <p className="mt-1 font-medium">{item.value}</p>
+              </li>
+            ))}
+          </ul>
           <p className="mt-4">
             <Link href="/actualidad/calificacion-energetica-a" className="underline">
-              Qué significa la calificación energética A
+              Qué significa la calificación energética
             </Link>
           </p>
         </Section>

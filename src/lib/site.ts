@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const siteName = "Blue Norte Promociones";
 
-const productionHost = "blue-norte-promociones.vercel.app";
+const canonicalProductionUrl = "https://bluepromociones.com";
 
 function isLocalUrl(value: string) {
   return /localhost|127\.0\.0\.1/i.test(value);
@@ -11,14 +11,7 @@ function isLocalUrl(value: string) {
 function resolveSiteUrl() {
   const configured = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/$/, "");
   if (configured && !isLocalUrl(configured)) return configured;
-
-  const vercelProduction = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim()
-    .replace(/^https?:\/\//, "")
-    .replace(/\/$/, "");
-  if (vercelProduction && !isLocalUrl(vercelProduction)) return `https://${vercelProduction}`;
-
-  if (process.env.VERCEL_ENV === "production") return `https://${productionHost}`;
-
+  if (process.env.VERCEL) return canonicalProductionUrl;
   return configured || "http://localhost:3000";
 }
 

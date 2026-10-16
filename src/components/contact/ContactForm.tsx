@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { cities } from "@/content/cities";
 import { dictionary } from "@/i18n/get-dictionary";
+import { contactSchema } from "@/lib/contact-schema";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -25,15 +26,49 @@ export function ContactForm({
     setStatus("loading");
     setErrors({});
 
+    if (typeof data.company_website === "string" && data.company_website.trim()) {
+      form.reset();
+      setStatus("success");
+      return;
+    }
+
+    const parsed = contactSchema.safeParse(data);
+    if (!parsed.success) {
+      const nextErrors: Record<string, string> = {};
+      for (const issue of parsed.error.issues) {
+        const key = String(issue.path[0] ?? "form");
+        if (!nextErrors[key]) nextErrors[key] = issue.message;
+      }
+      setErrors(nextErrors);
+      setStatus("error");
+      return;
+    }
+
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+    if (!accessKey) {
+      setStatus("error");
+      return;
+    }
+
     try {
-      const response = await fetch("/api/contacto", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: accessKey,
+          subject: `Solicitud de información${parsed.data.city ? ` — ${parsed.data.city}` : ""}`,
+          from_name: "Blue Norte Promociones",
+          name: parsed.data.name,
+          email: parsed.data.email,
+          replyto: parsed.data.email,
+          phone: parsed.data.phone,
+          city: parsed.data.city || "Sin ciudad concreta",
+          ...(parsed.data.promotion ? { promotion: parsed.data.promotion } : {}),
+          message: parsed.data.message,
+        }),
       });
-      const payload = (await response.json()) as { ok?: boolean; errors?: Record<string, string> };
-      if (!response.ok || !payload.ok) {
-        setErrors(payload.errors ?? {});
+      const payload = (await response.json()) as { success?: boolean };
+      if (!response.ok || !payload.success) {
         setStatus("error");
         return;
       }

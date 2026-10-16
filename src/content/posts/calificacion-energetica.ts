@@ -80,7 +80,7 @@ export const calificacionEnergetica: Post = {
     },
     {
       type: "p",
-      text: "Blue Norte no adelanta la letra de sus promociones. En cada ficha hay un apartado de eficiencia con el dato pendiente hasta que el técnico lo firme. Puedes verlo en [Edificio Pozuelo](/proyectos/calle-sevilla-21), y el contexto de clima en [Málaga](/ubicacion/malaga), [Santander](/ubicacion/santander), [Madrid](/ubicacion/madrid) o [Ciudad Real](/ubicacion/ciudad-real).",
+      text: "En [Edificio Pozuelo](/proyectos/calle-sevilla-21) el certificado del proyecto da una B en consumo de energía primaria no renovable y una B en emisiones. En el resto de promociones, la letra se publica cuando el técnico la firme. El contexto de clima está en [Málaga](/ubicacion/malaga), [Santander](/ubicacion/santander), [Madrid](/ubicacion/madrid) y [Ciudad Real](/ubicacion/ciudad-real).",
     },
     {
       type: "p",

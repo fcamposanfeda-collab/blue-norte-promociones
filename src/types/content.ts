@@ -62,7 +62,10 @@ export type Project = {
   qualities: SpecItem[];
   qualityDocument?: { href: string; label: string; fileName: string };
   commonAreas: SpecItem[];
-  energy?: string[];
+  energyCertificate?: {
+    intro: string;
+    ratings: { label: string; letter: string; value: string }[];
+  };
   highlights?: ProjectHighlight[];
   plans: ProjectPlan[];
   surroundings: {
