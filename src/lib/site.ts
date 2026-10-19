@@ -11,7 +11,7 @@ function isLocalUrl(value: string) {
 function resolveSiteUrl() {
   const configured = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/$/, "");
   if (configured && !isLocalUrl(configured)) return configured;
-  if (process.env.VERCEL) return canonicalProductionUrl;
+  if (process.env.NODE_ENV === "production") return canonicalProductionUrl;
   return configured || "http://localhost:3000";
 }
 
@@ -37,7 +37,7 @@ export function buildMetadata(input: {
     );
   }
 
-  const index = input.index !== false && process.env.VERCEL_ENV !== "preview";
+  const index = input.index !== false;
 
   return {
     title: { absolute: input.title },

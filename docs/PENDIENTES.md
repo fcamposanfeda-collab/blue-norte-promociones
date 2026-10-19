@@ -6,9 +6,9 @@ Nada de esta lista debe inventarse. Cuando exista el dato, se sustituye el marca
 
 - Logotipo (hoy la marca es solo tipográfica).
 - Dirección, teléfono, email y horario de las oficinas de Málaga, Santander y Ciudad Real. En Madrid ya está publicada la oficina de Paseo de la Castellana, 140, 14B; falta el horario.
-- En Vercel hay que definir `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` para que el formulario llegue a Web3Forms en la web publicada. En local ya está en `.env.local`.
+- En el servidor hay que definir `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` para que el formulario llegue a Web3Forms en la web publicada. En local ya está en `.env.local`.
 - Identificador de GA4 (`NEXT_PUBLIC_GA_ID`) y verificación de Search Console (`NEXT_PUBLIC_GSC_VERIFICATION`).
-- Apuntar bluepromociones.com a Vercel. La dirección canónica ya es https://bluepromociones.com, pero el dominio sigue en Raiola y todavía no abre esta web.
+- Publicar la web en el NAS Synology, con `NEXT_PUBLIC_SITE_URL=https://bluepromociones.com`. El panel `defoin.mine.nu:5001` no es la dirección pública de la web.
 
 ## Inventario
 

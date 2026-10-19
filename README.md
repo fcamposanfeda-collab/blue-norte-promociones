@@ -41,12 +41,14 @@ El formulario de contacto valida con Zod, ignora el campo señuelo `company_webs
 
 El aviso de cookies guarda la decisión en `localStorage` (`bn-consent`). Google Analytics 4 solo se inserta si la persona acepta y si `NEXT_PUBLIC_GA_ID` tiene forma `G-…`. Search Console se verifica con `NEXT_PUBLIC_GSC_VERIFICATION`.
 
-## Despliegue en Vercel
+## Publicación
 
-1. Importa este repositorio en Vercel.
-2. Framework: Next.js. No hace falta comando de build distinto de `npm run build`.
-3. Copia las variables de `.env.example` al proyecto, con `NEXT_PUBLIC_SITE_URL` en la URL real (sin barra final).
-4. El `sitemap.xml` y el `robots.txt` salen de esa URL.
+En el servidor, antes de construir, define `NEXT_PUBLIC_SITE_URL=https://bluepromociones.com` (sin barra final). El sitemap, `robots.txt` y las URLs canónicas salen de esa dirección.
+
+```bash
+npm run build
+npm start
+```
 
 ## SEO
 
