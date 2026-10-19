@@ -251,9 +251,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       ) : null}
       <Section title="Planos" tone="white">
         <p className="mt-4 max-w-3xl text-muted">
-          Plano general de venta y ficha comercial de cada vivienda y de los trasteros. Son orientativos y no
-          tienen carácter contractual. Las superficies y los precios de la tabla de esta página son los de
-          esas fichas.
+          Plano de venta de cada vivienda y de los trasteros. Son orientativos y no tienen carácter
+          contractual. Las superficies y los precios de la tabla de esta página son los de las fichas
+          comerciales.
         </p>
         <ul className="mt-6 grid gap-3 md:grid-cols-2">
           {project.plans.map((plan) => (
