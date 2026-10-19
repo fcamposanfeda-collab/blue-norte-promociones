@@ -14,7 +14,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ubicacion",
     "/historia",
     "/actualidad",
-    "/contacto",
     "/aviso-legal",
     "/politica-de-privacidad",
     "/politica-de-cookies",

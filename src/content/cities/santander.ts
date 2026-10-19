@@ -31,7 +31,7 @@ export const santander: CityPage = {
       level: "h3",
       paragraphs: [
         "El entorno de la Magdalena es una de las direcciones más reconocibles de Santander: paseo, palacio, playas urbanas y una trama residencial ya hecha. La obra nueva aquí es escasa y, cuando aparece, se juzga por cómo encaja en esa trama, no por imitar un resort. Interesan portales claros, viviendas con luz real —difícil en calles estrechas— y una memoria que detalle el comportamiento frente a la humedad.",
-        "Todavía no hay una promoción publicada junto a la Magdalena. Si buscas pisos en esa zona, el [formulario de contacto](/contacto) recoge el tipo de casa que quieres.",
+        "Todavía no hay una promoción publicada junto a la Magdalena. Si buscas pisos en esa zona, el [formulario](/#solicitud) recoge el tipo de casa que quieres.",
       ],
     },
     {
@@ -58,7 +58,7 @@ export const santander: CityPage = {
       paragraphs: [
         "El proceso no cambia por estar en el norte: reserva, contrato, cantidades a cuenta garantizadas, seguimiento de obra y entrega con repaso de acabados. Cambia el ritmo de la visita. Merece la pena volver al solar un día de lluvia y otro de viento sur, y preguntar cómo se recogen las aguas de la parcela.",
         "La [guía para comprar sobre plano](/actualidad/guia-comprar-sobre-plano) ordena los documentos. Las [ventajas de la obra nueva](/actualidad/ventajas-comprar-obra-nueva) recogen el otro lado, sin ocultar que una casa nueva también puede estar mal hecha.",
-        "La oficina de Santander tiene todavía la dirección, el teléfono y el horario por publicar. Escríbenos desde el [contacto](/contacto) o filtra las [promociones de la ciudad](/proyectos?ciudad=santander). Para ver cómo trabajamos en otros climas, están las páginas de [Málaga](/ubicacion/malaga) y [Madrid](/ubicacion/madrid).",
+        "La oficina de Santander tiene todavía la dirección, el teléfono y el horario por publicar. Escríbenos desde el [el formulario](/#solicitud) o filtra las [promociones de la ciudad](/proyectos?ciudad=santander). Para ver cómo trabajamos en otros climas, están las páginas de [Málaga](/ubicacion/malaga) y [Madrid](/ubicacion/madrid).",
       ],
     },
   ],

@@ -9,9 +9,6 @@ export function StickyCta({ name }: { name: string }) {
           <Link href="#solicitud" className="inline-flex min-h-11 items-center bg-ivory px-4 text-sm text-navy">
             Solicitar información
           </Link>
-          <Link href="/contacto" className="inline-flex min-h-11 items-center border border-ivory px-4 text-sm">
-            Contacto
-          </Link>
         </div>
       </div>
     </div>

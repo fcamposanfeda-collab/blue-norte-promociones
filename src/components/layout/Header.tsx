@@ -59,7 +59,7 @@ export function Header() {
             );
           })}
           <Link
-            href="/contacto"
+            href="/#solicitud"
             className="inline-flex min-h-11 items-center bg-ivory px-4 text-sm font-medium text-navy"
           >
             {dictionary.nav.request}
@@ -91,7 +91,8 @@ export function Header() {
             ))}
           </nav>
           <Link
-            href="/contacto"
+            href="/#solicitud"
+            onClick={() => setOpenPath(null)}
             className="mt-10 inline-flex min-h-12 items-center justify-center bg-ivory text-navy"
           >
             {dictionary.nav.request}

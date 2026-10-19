@@ -48,7 +48,7 @@ export default function HomePage() {
             <Link href="/proyectos" className="inline-flex min-h-12 items-center bg-ivory px-5 text-sm font-medium text-navy">
               Ver proyectos
             </Link>
-            <Link href="/contacto" className="inline-flex min-h-12 items-center border border-ivory px-5 text-sm">
+            <Link href="/#solicitud" className="inline-flex min-h-12 items-center border border-ivory px-5 text-sm">
               Solicitar información
             </Link>
           </div>

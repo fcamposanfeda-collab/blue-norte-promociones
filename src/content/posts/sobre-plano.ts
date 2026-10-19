@@ -103,7 +103,7 @@ export const sobrePlano: Post = {
     },
     {
       type: "p",
-      text: "Cuando tengas zona y dormitorios claros, [solicita información](/contacto). Te diremos si hay una promoción que encaje o si en esa ciudad todavía no hay ficha publicada.",
+      text: "Cuando tengas zona y dormitorios claros, [solicita información](/#solicitud). Te diremos si hay una promoción que encaje o si en esa ciudad todavía no hay ficha publicada.",
     },
   ],
   faq: [

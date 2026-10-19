@@ -37,7 +37,7 @@ export const malaga: CityPage = {
       level: "h3",
       paragraphs: [
         "El este de Málaga atrae a quien quiere playa y servicios urbanos en el mismo recorrido. Hay barrios consolidados, con comercio de proximidad, y piezas de costa más abiertas. Una promoción de pisos y áticos encaja aquí cuando la orientación y la terraza están bien resueltas: no basta con decir que «hay mar». Hay que saber qué se ve desde cada planta y qué sol entra en agosto.",
-        "Todavía no hay una promoción publicada en el este de Málaga. Si buscas esa zona, el [formulario de contacto](/contacto) recoge el interés sin adelantar datos que todavía no tenemos.",
+        "Todavía no hay una promoción publicada en el este de Málaga. Si buscas esa zona, el [formulario](/#solicitud) recoge el interés sin adelantar datos que todavía no tenemos.",
       ],
     },
     {

@@ -9,7 +9,7 @@ export function WhatsAppButton() {
   const raw = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || legalEntity.phone;
   const number = raw.replace(/\D/g, "");
   const raised = /^\/proyectos\/[^/]+$/.test(pathname);
-  const href = number ? `https://wa.me/${number}` : "/contacto";
+  const href = number ? `https://wa.me/${number}` : "/#solicitud";
   const label = number
     ? "Escribir por WhatsApp"
     : "WhatsApp pendiente de configurar. Ir al formulario de contacto";

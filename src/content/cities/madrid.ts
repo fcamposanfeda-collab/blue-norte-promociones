@@ -39,7 +39,7 @@ export const madrid: CityPage = {
       level: "h3",
       paragraphs: [
         "Retiro combina el parque, una trama residencial tranquila en muchas de sus calles y una presión de demanda alta. La obra nueva, cuando aparece, se mira como rareza. Interesan plantas que aprovechen la orientación —el invierno madrileño es frío y el verano, seco y largo— y elementos comunes que no conviertan el portal en un gasto difícil de explicar.",
-        "Todavía no hay una promoción publicada en Retiro. Si te encaja la zona, la [solicitud de información](/contacto) nos dice qué dormitorios buscas y si la casa es para vivir o para invertir.",
+        "Todavía no hay una promoción publicada en Retiro. Si te encaja la zona, la [solicitud de información](/#solicitud) nos dice qué dormitorios buscas y si la casa es para vivir o para invertir.",
       ],
     },
     {
@@ -64,7 +64,7 @@ export const madrid: CityPage = {
       id: "siguiente-paso",
       heading: "Cómo pedir información en Madrid",
       paragraphs: [
-        "Filtra las [promociones de Madrid](/proyectos?ciudad=madrid) o escribe desde [contacto](/contacto) con el distrito y los dormitorios. La oficina está en Paseo de la Castellana, 140, 14B.",
+        "Filtra las [promociones de Madrid](/proyectos?ciudad=madrid) o escribe desde [el formulario](/#solicitud) con el distrito y los dormitorios. La oficina está en Paseo de la Castellana, 140, 14B.",
         "Si estás comparando ciudades, Málaga y Santander tienen su propia lectura: [obra nueva en Málaga](/ubicacion/malaga) y [viviendas de obra nueva en Santander](/ubicacion/santander). No repetimos el mismo texto en las tres porque no es el mismo modo de vivir.",
       ],
     },
