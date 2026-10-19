@@ -273,17 +273,17 @@ export const projects: Project[] = [
         fileName: "plano-2b-calle-sevilla-21.pdf",
       },
       {
-        name: "3ª planta, vivienda A",
+        name: "3ª planta",
         href: `${sevillaDoc}/plano-3a.pdf`,
         fileName: "plano-3a-calle-sevilla-21.pdf",
       },
       {
-        name: "4ª planta, vivienda A",
+        name: "4ª planta",
         href: `${sevillaDoc}/plano-4a.pdf`,
         fileName: "plano-4a-calle-sevilla-21.pdf",
       },
       {
-        name: "5ª planta, vivienda A",
+        name: "5ª planta",
         href: `${sevillaDoc}/plano-5a.pdf`,
         fileName: "plano-5a-calle-sevilla-21.pdf",
       },
