@@ -28,6 +28,8 @@ const faq: FaqItem[] = [
   },
 ];
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return getAllProjects().map((project) => ({ slug: project.slug }));
 }

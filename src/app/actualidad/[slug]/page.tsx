@@ -9,6 +9,8 @@ import { getAllPosts, getPost, getRelatedPosts } from "@/lib/posts";
 import { blogPostingSchema, breadcrumbSchema, faqSchema, graphSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/site";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
 }

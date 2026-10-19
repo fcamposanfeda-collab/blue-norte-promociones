@@ -1,7 +1,7 @@
 import { dictionary } from "@/i18n/get-dictionary";
 import type { ProjectQuery } from "@/lib/projects";
 
-export function ProjectFilters({ query, action = "/proyectos" }: { query: ProjectQuery; action?: string }) {
+export function ProjectFilters({ query, action = "/proyectos/" }: { query: ProjectQuery; action?: string }) {
   const copy = dictionary.search;
   return (
     <form action={action} method="get" className="grid gap-4 border border-line bg-white p-5 md:grid-cols-3">

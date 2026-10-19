@@ -32,23 +32,13 @@ El idioma activo es el español de España. `src/i18n` deja el tipo de locale pr
 
 El formulario de contacto valida con Zod, ignora el campo señuelo `company_website` y exige la casilla de privacidad. El envío sale del navegador hacia Web3Forms con `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`.
 
-`POST /api/contacto` sigue disponible como vía alternativa y no lo usa el formulario:
-
-- `EMAIL_PROVIDER=console` deja el mensaje en el log del servidor.
-- `EMAIL_PROVIDER=resend` envía con la API de Resend. Hacen falta `RESEND_API_KEY`, `CONTACT_FROM_EMAIL` y `CONTACT_TO_EMAIL`.
-
 ## Analítica
 
 El aviso de cookies guarda la decisión en `localStorage` (`bn-consent`). Google Analytics 4 solo se inserta si la persona acepta y si `NEXT_PUBLIC_GA_ID` tiene forma `G-…`. Search Console se verifica con `NEXT_PUBLIC_GSC_VERIFICATION`.
 
 ## Publicación
 
-En el servidor, antes de construir, define `NEXT_PUBLIC_SITE_URL=https://bluepromociones.com` (sin barra final). El sitemap, `robots.txt` y las URLs canónicas salen de esa dirección.
-
-```bash
-npm run build
-npm start
-```
+La web pública es un sitio estático en GitHub Pages. El dominio `bluepromociones.com` apunta con cuatro registros A a `185.199.108.153`, `185.199.109.153`, `185.199.110.153` y `185.199.111.153`. El formulario sale del navegador hacia Web3Forms.
 
 ## SEO
 

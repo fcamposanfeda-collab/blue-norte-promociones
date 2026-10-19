@@ -57,7 +57,7 @@ export default function HomePage() {
 
       <section className="relative z-20 -mt-12 pb-8" aria-label="Buscador de promociones">
         <Container>
-          <form action="/proyectos" method="get" className="grid gap-4 border border-line bg-ivory p-5 shadow-lg md:grid-cols-3">
+          <form action="/proyectos/" method="get" className="grid gap-4 border border-line bg-ivory p-5 shadow-lg md:grid-cols-3">
             <label className="grid gap-2 text-sm">
               {copy.city}
               <select name="ciudad" className="min-h-12 border border-line bg-white px-3" defaultValue="">

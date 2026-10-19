@@ -11,6 +11,8 @@ import { breadcrumbSchema, faqSchema, graphSchema } from "@/lib/schema";
 import { filterProjects } from "@/lib/projects";
 import { buildMetadata } from "@/lib/site";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return cities.map((city) => ({ ciudad: city.slug }));
 }
